@@ -1,0 +1,22 @@
+#-----=====[ Command ]=====-----#
+
+AgarthaLib:
+  Help:
+    Main: "Help"
+    Aliases:
+    - "Help"
+  About:
+    Main: "About"
+    Aliases:
+    - "About"
+  Menu:
+    Main: "Menu"
+    Aliases:
+    - "Menu"
+  Reload:
+    Main: "Reload"
+    Permission: "agarthalib.command.reload"
+    Aliases:
+    - "Reload"
+    - "Setup"
+  

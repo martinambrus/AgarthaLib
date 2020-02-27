@@ -1,0 +1,259 @@
+#-----=====[ Metrics Message ]=====-----#
+
+Metrics:
+  Success:
+  - "{prefix} Berhasil mengirim data statistik"
+  Failed: 
+  - "{prefix} Gagal mengirim data statistik"
+
+#-----=====[ Hook Message ]=====-----#
+
+Hook:
+  Header: 
+  - "{prefix} &8&l&m=-=-=-=-=-=-=-=-=-=-=&r &2{plugin} Dependensi &8&l&m=-=-=-=-=-=-=-=-=-=-="
+  Footer: 
+  - "{prefix} &8&l&m=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+  Soft_Dependency_Header: 
+  - "{prefix} &5Dependensi-Tambahan&f:"
+  Soft_Dependency_List: 
+  - "{prefix} &5- &d{hook} &8[{status}&8]"
+  Hard_Dependency_Header: 
+  - "{prefix} &5Dependensi-Utama&f:"
+  Hard_Dependency_List: 
+  - "{prefix} &5- &d{hook} &8[{status}&8]"
+  Status_Hooked: 
+  - "&4Terhubung"
+  Status_Not_Hook: 
+  - "&4Tidak-Terhubung"
+  Outdated:
+  - "{prefix} Tolong instal &c{plugin} &rke versi terbaru"
+
+#-----=====[ Updater Message ]=====-----#
+
+Updater:
+  Button_Help: "&4&l?"
+  Button_Spigot: "&cSpigot"
+  Button_Discord: "&cDiscord"
+  Button_Patreon: "&cPatreon"
+  Button_Menu: "&cMenu"
+  Button_Website: "&6LINK"
+  Tooltip_Help:
+  - "&6&lPembaharuan Plugin"
+  - "&eServer kamu menggunakan plugin agartha"
+  - "&eJika terdapat plugin yang sudah usang"
+  - "&eTolong perbarui ke versi plugin terbaru"
+  Tooltip_Spigot:
+  - "&8[&a&lSpigot&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bKlik: &fKunjungi halaman spigot {sign_done} &8]"
+  Tooltip_Discord:
+  - "&8[&a&lDiscord&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bKlik: &fKunjungi halaman discord {sign_done} &8]"
+  Tooltip_Patreon:
+  - "&8[&a&lPatreon&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bKlik: &fKunjungi halaman patreon {sign_done} &8]"
+  Tooltip_Menu:
+  - "&8[&a&lMenu&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bKlik: &fBuka menu plugin {sign_done} &8]"
+  Tooltip_Website:
+  - "&8[&a&lWebsite&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bKlik: &fBuka website plugin {sign_done} &8]"
+  Message_Join:
+  - "&8&l&m==========&r &2&lPlugin Agartha &8&l&m=========="
+  - ""
+  - "&2&lDeskripsi: &8&l[{tooltip_help}&8&l]"
+  - "&2&l{icon_arrow_right} &aPencipta: &7{plugin_author}"
+  - "&2&l{icon_arrow_right} &aTerinstal: &7{plugin_installed} plugins"
+  - "&2&l{icon_arrow_right} &aUsang: &7{plugin_outdated} plugins"
+  - ""
+  - "&8&l[{tooltip_spigot}&8&l] - [{tooltip_discord}&8&l] - [{tooltip_patreon}&8&l] - [{tooltip_menu}&8&l]"
+  - ""
+  - "&8&l&m==========&r &2&lPlugin Agartha &8&l&m=========="
+  Message_About:
+  - "&8&l&m==========&r &2&lTentang Plugin &8&l&m=========="
+  - ""
+  - "&2&lDeskripsi:"
+  - "&2&l{icon_arrow_right} &aNama: &7{plugin_name}"
+  - "&2&l{icon_arrow_right} &aPencipta: &7{plugin_author}"
+  - "&2&l{icon_arrow_right} &aVersi: &7{plugin_version}"
+  - "&2&l{icon_arrow_right} &aHarga: &e{plugin_price}"
+  - "&2&l{icon_arrow_right} &aWebsite: &8&l[{tooltip_website}&8&l]"
+  - ""
+  - "&8&l&m==========&r &2&lTentang Plugin &8&l&m=========="
+  Status_Latest:
+  - "&2Terbaru"
+  Status_Outdated:
+  - "&cUsang"
+  Status_Not_Installed:
+  - "&4Tidak-Terinstal"
+  Price_Premium:
+  - "&e{plugin_price_value} {plugin_price_symbol}"
+  Price_Free: 
+  - "&cGratis" 
+  Failed:
+  - "{prefix} Gagal terhubung dengan pembaharuan plugin"
+
+#-----=====[ Plugin Message ]=====-----#
+
+Plugin:
+  Deactivated:
+  - "{prefix} Plugin telah dimatikan dari kontrol panel"
+  Information_Not_Match:
+  - "{prefix} Informasi plugin tidak sesuai"
+  Lack_Dependency:
+  - "{prefix} Kamu harus menginstal plugin &c{dependency}"
+
+#-----=====[ Command Message ]=====-----#
+
+Command:
+  AgarthaLib_Reload_Success:
+  - "{prefix} Berhasil memuat konfigurasi!"
+  
+#-----=====[ Argument Message ]=====-----#
+
+Argument:
+  Invalid:
+  - "{prefix} Perintal argumen tidak benar!"
+  AgarthaLib_Help: 
+  - "{tooltip_help} &3/agarthalib help &b[<page>]"
+  AgarthaLib_About: 
+  - "{tooltip_about} &3/agarthalib about"
+  AgarthaLib_Menu: 
+  - "{tooltip_menu} &3/agarthalib menu"
+  AgarthaLib_Reload: 
+  - "{tooltip_reload} &3/agarthalib reload"
+
+#-----=====[ Tooltip Message ]=====-----#
+
+Tooltip:
+  AgarthaLib_Help: "Memperlihatkan semua perintah plugin"
+  AgarthaLib_About: "Memperlihatkan semua informasi plugin"
+  AgarthaLib_Menu: "Membuka menu plugin"
+  AgarthaLib_Reload: "Memuat data konfigurasi"
+  
+#-----=====[ Help Message ]=====-----#
+
+Help:
+  Header: 
+  - "&6Bantuan {plugin}:"
+  Page: 
+  - "&8&l[&6&l{previous}&8&l]&r&8&l&m=======&r&8&l[&r &2Halaman &7(&d{page}&7/&d{maxpage}&7) &8&l]&8&l&m=======&r&8&l[&6&l{next}&8&l]"
+  Previous_Page: 
+  - "&cHalaman sebelumnya"
+  Next_Page:
+  - "&cHalaman selanjutnya"
+  
+#-----=====[ Menu Message ]=====-----#
+
+Menu:
+  Page_Title_Home: "&9&lHalaman Utama"
+  Page_Title_Updater: "&2&lAgartha &0[&4{page}&8/&4{maxpage}&0]"
+  Item_Header_Plugin: "&8[&2{plugin_name}&8]"
+  Item_Header_Next: "&8[&aSelanjutnya&8]"
+  Item_Header_Previous: "&8[&aSebelumnya&8]"
+  Item_Lores_Plugin_Installed:
+  - "&8&m-------------------------"
+  - ""
+  - "&2&l{icon_arrow_right} &6Status: &r{plugin_status}"
+  - "&2&l{icon_arrow_right} &6Tipe: &a{plugin_type}"
+  - "&2&l{icon_arrow_right} &6Versi: &7{plugin_version}"
+  - "&2&l{icon_arrow_right} &6Terbaru: &7{plugin_latest}"
+  - ""
+  - "&8[ &bKlik: &fMemperlihatkan lebih detail {sign_done} &8]"
+  Item_Lores_Plugin_Not_Installed:
+  - "&8&m-------------------------"
+  - ""
+  - "&2&l{icon_arrow_right} &6Status: &r{plugin_status}"
+  - "&2&l{icon_arrow_right} &6Tipe: &a{plugin_type}"
+  - ""
+  - "&8[ &bKlik: &fMemperlihatkan lebih detail {sign_done} &8]"
+  Item_Lores_Next:
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bKlik: &fMengganti ke halaman selanjutnya {sign_done} &8]"
+  Item_Lores_Previous:
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bKlik: &fMengganti ke halaman sebelumnya {sign_done} &8]"
+  
+#-----=====[ Console Message ]=====-----#
+
+Console:
+  Not_Player:
+  - "{prefix} Hanya player yang dapat mengakses perintah ini!"
+
+#-----=====[ Character Message ]=====-----#
+
+Character:
+  False_Pattern:
+  - "{prefix} Tidak boleh mengandung karakter spesial!"
+
+#-----=====[ List Message ]=====-----#
+
+List:
+  Header: 
+  - "&7&l&m---&8&l&m==[&r &2Daftar &7(&d{page}&8/&d{maxpage}&7) &8&l&m]==&7&l&m---"
+  Container: 
+  - "&8&l[&2&l{index}&8&l] &c{container}"
+  Item: 
+  - "&8&l[&2&l{index}&8&l] &c{item} {tooltip}" 
+
+#-----=====[ Permission Message ]=====-----#
+
+Permission:
+  Lack: 
+  - "{prefix} Kamu tidak memiliki izin &c{permission}"
+
+#-----=====[ Player Message ]=====-----#
+
+Player:
+  Target_Offline: 
+  - "{prefix} Target player tidak online!"
+
+#-----=====[ File Message ]=====-----#
+
+File:
+  Not_Exists: 
+  - "{prefix} Target berkas tidak ada!"
+  
+#-----=====[ Exception Message ]=====-----#
+
+Exception:
+  Database_No_SQL_Connection: "Tidak dapat terhubung koneksi SQL: "
+  Database_No_SQLite_Library: "Anda membutuhkan pustaka SQLite JBDC"
+  Database_No_Table: "Kesalahan Database: Tidak Ditemukan Tabel"
+  Database_SQL_Connection_Close: "Gagal menutup koneksi database:"
+  Database_SQL_Connection_Execute: "Tidak dapat menjalankan pernyataan basis data:"
+  Database_SQL_Connection_Initialize: "Tidak dapat terhubung koneksi"
+
+#-----=====[ Location Message ]=====-----#
+
+Location:
+  Coordinate: 
+  - "&7x: &d{x}&7, y: &d{y}&7,z: &d{z}"  
+
+#-----=====[ Slot Type ]=====-----#
+
+Slot_Type:
+  Weapon: "Senjata"
+  Armor: "Armor"
+  Universal: "Universal"
+
+#-----=====[ Time Message ]=====-----#
+
+Time:
+  Years: "tahun"
+  Weeks: "minggu"
+  Days: "hari"
+  Hours: "jam"
+  Minutes: "menit"
+  Seconds: "detik"

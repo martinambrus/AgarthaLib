@@ -1,0 +1,48 @@
+<component name="libraryTable">
+  <library name="EssentialsXProtect-2.17.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsXProtect-2.17.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Citizens.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LifeEssence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsXSpawn-2.17.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/HolographicDisplays.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mcMMO-2.1.113-Nulled.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Factions.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsXChat-2.17.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/FeatherBoard-4.11.1-CRACKED.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/worldedit-bukkit-7.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsXXMPP-2.17.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsX-2.17.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/CombatStamina.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/worldguard-bukkit-7.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsXAntiBuild-2.17.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/BattleLevels.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Vault.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/FactionsFramework.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/GangsPlus-2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/MVdWPlaceholderAPI.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/SkillAPI.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EssentialsXGeoIP-2.17.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LangUtils-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/SimpleClans.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Jobs4.15.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Kingdoms-v14.2.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/MyItems.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Skills-11.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/MassiveCore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Factions_massive.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Towny-0.95.2.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/PlaceholderAPI-2.10.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LegacyFactions.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Heroes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/Heroes.jar!/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/MassiveCore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Factions_massive.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Heroes.jar!/" />
+    </SOURCES>
+  </library>
+</component>

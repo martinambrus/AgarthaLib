@@ -1,0 +1,66 @@
+Configuration:
+  General:
+    Version: 1.0
+    #Version of the config.
+    
+    Locale: "en"
+    #Locale language
+  
+  Metrics:
+    Message: true
+    #Send message to console when connect metrics.
+  
+  Hook:
+    Message: false
+    #Send message to console about dependencies information.
+    
+  Updater:
+    Message: true
+    #Send message to console when there are a new.
+    
+  Pattern:
+    Special: "[^a-zA-Z0-9_]"
+    #Special character
+    
+  Utility:
+    Tooltip: "&8&l[&4&l?&8&l]"
+    #Character for text tooltip.
+    
+    Currency: "$"
+    #Symbol currency.
+  
+  Bar:
+    Length: 16
+    #Length of bar.
+    
+    Symbol: "&l■"
+    #Symbol of text bar.
+    
+    Fill: "&4"
+    #Color of filled bar.
+    
+    Empty: "&0"
+    #Color of empty bar.
+      
+  Effect:
+    Range: 50
+    #Max distance for send packet particle and sound.
+    
+  List:
+    Content: 5
+    #Max of list content what will be displayed
+    
+  Event:
+    Enable_Region: true
+    #Enable region event from worldguard
+    
+  Damage:
+    Enable_Formula: false
+    #Enable custom stats formula damage
+    #Final Damage = max(minDamage, ((damage * (1 - min(1, (defense * scaleDefense) / damage))) * multiplier) + instantDamage - instantDefense)
+    
+    Min_Value: 1.0
+    #Minimum final damage
+    
+    Scale_Defense: 0.5
+    #Scale defense in formula damage

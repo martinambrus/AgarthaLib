@@ -1,0 +1,337 @@
+// 
+// Decompiled by Procyon v0.5.36
+// 
+
+package com.praya.agarthalib.packet.item;
+
+import com.praya.agarthalib.AgarthaLib;
+import com.praya.agarthalib.handler.HandlerPacket;
+import com.praya.agarthalib.utility.EquipmentUtil;
+import com.praya.agarthalib.utility.JsonUtil;
+import com.praya.agarthalib.utility.MathUtil;
+import core.praya.agarthalib.builder.bridge.TagsNBTBooks;
+import core.praya.agarthalib.builder.bridge.TagsNBTCustom;
+import core.praya.agarthalib.builder.bridge.TagsNBTItem;
+import core.praya.agarthalib.enums.branch.MaterialEnum;
+import core.praya.agarthalib.enums.main.Slot;
+import core.praya.agarthalib.enums.main.TagsAttribute;
+import net.minecraft.server.v1_15_R1.*;
+import org.bukkit.craftbukkit.v1_15_R1.inventory.CraftItemStack;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
+
+public class PacketItem_1_15_R1 extends HandlerPacket implements TagsNBTItem, TagsNBTBooks, TagsNBTCustom
+{
+    public PacketItem_1_15_R1(final AgarthaLib plugin) {
+        super(plugin);
+    }
+    
+    @Override
+    public final void setString(final String key, final String parent, final ItemStack item, final String value) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        if (parent != null) {
+            final NBTTagCompound attribute = compound.hasKey(parent) ? compound.getCompound(parent) : new NBTTagCompound();
+            attribute.setString(key, value);
+            compound.set(parent, (NBTBase)attribute);
+        }
+        else {
+            compound.setString(key, value);
+        }
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void setInt(final String key, final String parent, final ItemStack item, final int value) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        if (parent != null) {
+            final NBTTagCompound attribute = compound.hasKey(parent) ? compound.getCompound(parent) : new NBTTagCompound();
+            attribute.setInt(key, value);
+            compound.set(parent, (NBTBase)attribute);
+        }
+        else {
+            compound.setInt(key, value);
+        }
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void setDouble(final String key, final String parent, final ItemStack item, final double value) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        if (parent != null) {
+            final NBTTagCompound attribute = compound.hasKey(parent) ? compound.getCompound(parent) : new NBTTagCompound();
+            attribute.setDouble(key, value);
+            compound.set(parent, (NBTBase)attribute);
+        }
+        else {
+            compound.setDouble(key, value);
+        }
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void setLong(final String key, final String parent, final ItemStack item, final long value) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        if (parent != null) {
+            final NBTTagCompound attribute = compound.hasKey(parent) ? compound.getCompound(parent) : new NBTTagCompound();
+            attribute.setLong(key, value);
+            compound.set(parent, (NBTBase)attribute);
+        }
+        else {
+            compound.setLong(key, value);
+        }
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void setBoolean(final String key, final String parent, final ItemStack item, final boolean value) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        if (parent != null) {
+            final NBTTagCompound attribute = compound.hasKey(parent) ? compound.getCompound(parent) : new NBTTagCompound();
+            attribute.setBoolean(key, value);
+            compound.set(parent, (NBTBase)attribute);
+        }
+        else {
+            compound.setBoolean(key, value);
+        }
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void setListString(final String key, final String parent, final ItemStack item, final List<String> list) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        final NBTTagList tagList = new NBTTagList();
+        for (final String part : list) {
+            NBTTagCompound cmpnd = new NBTTagCompound();
+            cmpnd.setString("stat", part);
+            tagList.add(cmpnd);
+        }
+        if (parent != null) {
+            final NBTTagCompound attribute = compound.hasKey(parent) ? compound.getCompound(parent) : new NBTTagCompound();
+            attribute.set(key, (NBTBase)tagList);
+            compound.set(parent, (NBTBase)attribute);
+        }
+        else {
+            compound.set(key, (NBTBase)tagList);
+        }
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final String getString(final String key, final String parent, final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        if (itemNMS.hasTag()) {
+            final NBTTagCompound compound = itemNMS.getTag();
+            if (parent == null) {
+                return compound.getString(key);
+            }
+            if (compound.hasKey(parent)) {
+                return compound.getCompound(parent).getString(key);
+            }
+        }
+        return null;
+    }
+    
+    @Override
+    public final int getInt(final String key, final String parent, final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        if (itemNMS.hasTag()) {
+            final NBTTagCompound compound = itemNMS.getTag();
+            if (parent == null) {
+                return compound.getInt(key);
+            }
+            if (compound.hasKey(parent)) {
+                return compound.getCompound(parent).getInt(key);
+            }
+        }
+        return 0;
+    }
+    
+    @Override
+    public final double getDouble(final String key, final String parent, final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        if (itemNMS.hasTag()) {
+            final NBTTagCompound compound = itemNMS.getTag();
+            if (parent == null) {
+                return compound.getDouble(key);
+            }
+            if (compound.hasKey(parent)) {
+                return compound.getCompound(parent).getDouble(key);
+            }
+        }
+        return 0.0;
+    }
+    
+    @Override
+    public final long getLong(final String key, final String parent, final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        if (itemNMS.hasTag()) {
+            final NBTTagCompound compound = itemNMS.getTag();
+            if (parent == null) {
+                return compound.getLong(key);
+            }
+            if (compound.hasKey(parent)) {
+                return compound.getCompound(parent).getLong(key);
+            }
+        }
+        return 0L;
+    }
+    
+    @Override
+    public final boolean getBoolean(final String key, final String parent, final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        if (itemNMS.hasTag()) {
+            final NBTTagCompound compound = itemNMS.getTag();
+            if (parent == null) {
+                return compound.getBoolean(key);
+            }
+            if (compound.hasKey(parent)) {
+                return compound.getCompound(parent).getBoolean(key);
+            }
+        }
+        return false;
+    }
+    
+    @Override
+    public final List<String> getListString(final String key, final String parent, final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final List<String> list = new ArrayList<String>();
+        if (itemNMS.hasTag()) {
+            final NBTTagCompound compound = itemNMS.getTag();
+            if (parent != null) {
+                if (compound.hasKey(parent)) {
+                    final NBTTagList tagList = compound.getCompound(parent).getList(key, 8);
+                    for (int t = 0; t < tagList.size(); ++t) {
+                        list.add(tagList.getString(t));
+                    }
+                }
+            }
+            else {
+                final NBTTagList tagList = compound.getList(key, 8);
+                for (int t = 0; t < tagList.size(); ++t) {
+                    list.add(tagList.getString(t));
+                }
+            }
+        }
+        return list;
+    }
+    
+    @Override
+    public final void remove(final String key, final String parent, final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        if (parent != null) {
+            if (compound.hasKey(parent)) {
+                final NBTTagCompound attribute = compound.getCompound(parent);
+                attribute.remove(key);
+            }
+        }
+        else {
+            compound.remove(key);
+        }
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void addNBT(final ItemStack item, final TagsAttribute tags, double value, final Slot slot) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        final NBTTagCompound attribute = new NBTTagCompound();
+        final NBTTagList baseList = compound.getList("AttributeModifiers", 10);
+        final NBTTagList tagList = new NBTTagList();
+        final String nameSlot = slot.getName();
+        final String name = tags.getName();
+        final String type = tags.getValueType();
+        final double minValue = tags.getMinValue();
+        final double maxValue = tags.getMaxValue();
+        for (int t = 0; t < baseList.size(); ++t) {
+            final NBTTagCompound element = baseList.getCompound(t);
+            final String elementName = String.valueOf(element.get("AttributeName")).replaceAll(Pattern.quote("\""), "");
+            final String elementSlot = String.valueOf(element.get("Slot")).replaceAll(Pattern.quote("\""), "");
+            if (!name.equalsIgnoreCase(elementName) || !nameSlot.equalsIgnoreCase(elementSlot)) {
+                tagList.add((NBTBase)element);
+            }
+        }
+        value = MathUtil.limitDouble(value, minValue, maxValue);
+        attribute.setString("AttributeName", name);
+        attribute.setString("Name", name);
+        attribute.setInt("Operation", 0);
+        attribute.setInt("UUIDLeast", 894654);
+        attribute.setInt("UUIDMost", 2872);
+        attribute.setString("Slot", nameSlot);
+        if (type.equalsIgnoreCase("Double")) {
+            attribute.setDouble("Amount", value);
+        } else {
+            attribute.setInt("Amount", (int) value);
+        }
+
+        tagList.add((NBTBase)attribute);
+        compound.set("AttributeModifiers", (NBTBase)tagList);
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void clearNBT(final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        final NBTTagList tagList = new NBTTagList();
+        compound.set("AttributeModifiers", (NBTBase)tagList);
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final void setUnbreakable(final ItemStack item, final boolean unbreakable) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        compound.setInt("Unbreakable", (int)(unbreakable ? 1 : 0));
+        itemNMS.setTag(compound);
+        item.setItemMeta(CraftItemStack.asBukkitCopy(itemNMS).getItemMeta());
+    }
+    
+    @Override
+    public final boolean isUnbreakable(final ItemStack item) {
+        final net.minecraft.server.v1_15_R1.ItemStack itemNMS = CraftItemStack.asNMSCopy(item);
+        final NBTTagCompound compound = itemNMS.hasTag() ? itemNMS.getTag() : new NBTTagCompound();
+        return compound.hasKey("Unbreakable") && compound.getInt("Unbreakable") == 1;
+    }
+    
+    @Override
+    public final ItemStack createBook(final String name, final int amount, final String title, final String author, final String... pages) {
+        final ItemStack book = EquipmentUtil.createItem(MaterialEnum.WRITTEN_BOOK, name, amount);
+        final net.minecraft.server.v1_15_R1.ItemStack cloneBook = CraftItemStack.asNMSCopy(book);
+        final NBTTagCompound compound = new NBTTagCompound();
+        final NBTTagList tagList = new NBTTagList();
+        compound.setString("title", title);
+        compound.setString("author", author);
+        for (final String textPage : pages) {
+            NBTTagCompound cmpnd = new NBTTagCompound();
+            cmpnd.setString("stat", JsonUtil.getJsonText(textPage));
+            tagList.add(cmpnd);
+        }
+        compound.set("pages", (NBTBase)tagList);
+        cloneBook.setTag(compound);
+        return CraftItemStack.asBukkitCopy(cloneBook);
+    }
+    
+    @Override
+    public final void openBook(final ItemStack book, final Player player) {
+    }
+}

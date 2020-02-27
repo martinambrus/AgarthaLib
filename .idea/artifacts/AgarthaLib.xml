@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AgarthaLib">
+    <output-path>$PROJECT_DIR$/build/artifacts</output-path>
+    <root id="archive" name="AgarthaLib.jar">
+      <element id="module-output" name="AgarthaLib_source_from_Procyon" />
+    </root>
+  </artifact>
+</component>

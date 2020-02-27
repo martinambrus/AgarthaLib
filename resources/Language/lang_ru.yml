@@ -1,0 +1,258 @@
+#-----=====[ Metrics Message ]=====-----#
+
+Metrics:
+  Success:
+  - "{prefix} Успешно представлена статистика"
+  Failed: 
+  - "{prefix} Не удалось представить показатели статистики"
+
+#-----=====[ Hook Message ]=====-----#
+
+Hook:
+  Header: 
+  - "{prefix} &8&l&m=-=-=-=-=-=-=-=-=-=-=&r &2{plugin} Зависимости &8&l&m=-=-=-=-=-=-=-=-=-=-="
+  Footer: 
+  - "{prefix} &8&l&m=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+  Soft_Dependency_Header: 
+  - "{prefix} &5Мягкая зависимость&f:"
+  Soft_Dependency_List: 
+  - "{prefix} &5- &d{hook} &8[{status}&8]"
+  Hard_Dependency_Header: 
+  - "{prefix} &5Жесткая зависимость&f:"
+  Hard_Dependency_List: 
+  - "{prefix} &5- &d{hook} &8[{status}&8]"
+  Status_Hooked: 
+  - "&4Связан"
+  Status_Not_Hook: 
+  - "&4Не связан"
+  Outdated:
+  - "{prefix} Установите последнюю версию плагина &c{plugin} &r!"
+
+#-----=====[ Updater Message ]=====-----#
+
+Updater:
+  Button_Help: "&4&l?"
+  Button_Spigot: "&cSpigot"
+  Button_Discord: "&cDiscord"
+  Button_Patreon: "&cPatreon"
+  Button_Menu: "&cМеню"
+  Button_Website: "&6ССЫЛКА"
+  Tooltip_Help:
+  - "&6&lОбновления плагина"
+  - "&eВаш сервер использует плагина Agartha"
+  - "&eЕсли некоторые из плагинов устарели,"
+  - "&eобновите их до последней версии."
+  Tooltip_Spigot:
+  - "&8[&a&lSpigot&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bКлик: &fПосетите страницу автора на Spigot {sign_done} &8]"
+  Tooltip_Discord:
+  - "&8[&a&lDiscord&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bКлик: &fПосетите страницу автора на discord {sign_done} &8]"
+  Tooltip_Patreon:
+  - "&8[&a&lPatreon&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bКлик: &fПосетите страницу автора на patreon {sign_done} &8]"
+  Tooltip_Menu:
+  - "&8[&a&lМеню&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bКлик: &fОткройте меню плагина {sign_done} &8]"
+  Tooltip_Website:
+  - "&8[&a&lСайт&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bКлик: &fОткрыть сайт плагина {sign_done} &8]"
+  Message_Join:
+  - "&8&l&m==========&r &2&lПлагин Agartha &8&l&m=========="
+  - ""
+  - "&2&lОписание: &8&l[{tooltip_help}&8&l]"
+  - "&2&l{icon_arrow_right} &aАвтор: &7{plugin_author}"
+  - "&2&l{icon_arrow_right} &aУстановлено: &7{plugin_installed} плагинов"
+  - "&2&l{icon_arrow_right} &aУстарело: &7{plugin_outdated} плагинов"
+  - ""
+  - "&8&l[{tooltip_spigot}&8&l] - [{tooltip_discord}&8&l] - [{tooltip_patreon}&8&l] - [{tooltip_menu}&8&l]"
+  - ""
+  - "&8&l&m==========&r &2&lПлагин Agartha &8&l&m=========="
+  Message_About:
+  - "&8&l&m==========&r &2&lО плагине &8&l&m=========="
+  - ""
+  - "&2&lDescription:"
+  - "&2&l{icon_arrow_right} &aНазвание: &7{plugin_name}"
+  - "&2&l{icon_arrow_right} &aАвтор: &7{plugin_author}"
+  - "&2&l{icon_arrow_right} &aВерсия: &7{plugin_version}"
+  - "&2&l{icon_arrow_right} &aСтоимость: &e{plugin_price}"
+  - "&2&l{icon_arrow_right} &aСайт: &8&l[{tooltip_website}&8&l]"
+  - ""
+  - "&8&l&m==========&r &2&lО плагине &8&l&m=========="
+  Status_Latest:
+  - "&2Самый свежий"
+  Status_Outdated:
+  - "&cУстарел"
+  Status_Not_Installed:
+  - "&4Не установлен"
+  Price_Premium:
+  - "&e{plugin_price_value} {plugin_price_symbol}"
+  Price_Free: 
+  - "&cБесплатно" 
+  Failed:
+  - "{prefix} Не удалось подключиться для получения обновления плагина"
+
+#-----=====[ Plugin Message ]=====-----#
+
+Plugin:
+  Deactivated:
+  - "{prefix} Плагин отключен с панели управления"
+  Information_Not_Match:
+  - "{prefix} Информация о плагине не соответствует!"
+  Lack_Dependency:
+  - "{prefix} Чтобы этот плагин работал, вам необходимо установить &c{dependency}"
+
+#-----=====[ Command Message ]=====-----#
+
+Command:
+  AgarthaLib_Reload_Success:
+  - "{prefix} Конфигурация перезагружена!"
+  
+#-----=====[ Argument Message ]=====-----#
+
+Argument:
+  Invalid:
+  - "{prefix} Аргумент команды недействительный!"
+  AgarthaLib_Help: 
+  - "{tooltip_help} &3/agarthalib help &b[<page>]"
+  AgarthaLib_About: 
+  - "{tooltip_about} &3/agarthalib about"
+  AgarthaLib_Menu: 
+  - "{tooltip_menu} &3/agarthalib menu"
+  AgarthaLib_Reload: 
+  - "{tooltip_reload} &3/agarthalib reload"
+
+#-----=====[ Tooltip Message ]=====-----#
+
+Tooltip:
+  AgarthaLib_Help: "Показжет все команды плагина"
+  AgarthaLib_About: "Покажет информацию о плагине"
+  AgarthaLib_Menu: "Откроет меню плагина"
+  AgarthaLib_Reload: "Перезагрузит конфигурацию"
+  
+#-----=====[ Help Message ]=====-----#
+
+Help:
+  Header: 
+  - "&6{plugin} Справка:"
+  Page: 
+  - "&8&l[&6&l{previous}&8&l]&r&8&l&m=======&r&8&l[&r &2Страница &7(&d{page}&7/&d{maxpage}&7) &8&l]&8&l&m=======&r&8&l[&6&l{next}&8&l]"
+  Previous_Page: 
+  - "&cПредыдущая страница"
+  Next_Page:
+  - "&cСледующая страница"
+  
+#-----=====[ Menu Message ]=====-----#
+
+Menu:
+  Page_Title_Home: "&9&lДомашняя страница"
+  Page_Title_Updater: "&2&lAgartha &0[&4{page}&8/&4{maxpage}&0]"
+  Item_Header_Plugin: "&8[&2{plugin_name}&8]"
+  Item_Header_Next: "&8[&aДальше&8]"
+  Item_Header_Previous: "&8[&aНазад&8]"
+  Item_Lores_Plugin_Installed:
+  - "&8&m-------------------------"
+  - ""
+  - "&2&l{icon_arrow_right} &6Статус: &r{plugin_status}"
+  - "&2&l{icon_arrow_right} &6Тип: &a{plugin_type}"
+  - "&2&l{icon_arrow_right} &6Версия: &7{plugin_version}"
+  - "&2&l{icon_arrow_right} &6Последняя: &7{plugin_latest}"
+  - ""
+  - "&8[ &bКлик: &fЧтобы показать больше информации {sign_done} &8]"
+  Item_Lores_Plugin_Not_Installed:
+  - "&8&m-------------------------"
+  - ""
+  - "&2&l{icon_arrow_right} &6Статус: &r{plugin_status}"
+  - "&2&l{icon_arrow_right} &6Тип: &a{plugin_type}"
+  - ""
+  - "&8[ &bКлик: &fЧтобы показать больше информации {sign_done} &8]"
+  Item_Lores_Next:
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bКлик: &fПерейти на следующую страницу {sign_done} &8]"
+  Item_Lores_Previous:
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bКлик: &fПерейти на предыдущую страницу {sign_done} &8]"
+  
+#-----=====[ Console Message ]=====-----#
+
+Console:
+  Not_Player:
+  - "{prefix} Только игрок может выполнить эту команду!"
+
+#-----=====[ Character Message ]=====-----#
+
+Character:
+  False_Pattern:
+  - "{prefix} Не может содержать специальный символ!"
+
+#-----=====[ List Message ]=====-----#
+
+List:
+  Header: 
+  - "&7&l&m---&8&l&m==[&r &2Список &7(&d{page}&8/&d{maxpage}&7) &8&l&m]==&7&l&m---"
+  Container: 
+  - "&8&l[&2&l{index}&8&l] &c{container}"
+  Item: 
+  - "&8&l[&2&l{index}&8&l] &c{item} {tooltip}" 
+
+#-----=====[ Permission Message ]=====-----#
+
+Permission:
+  Lack: 
+  - "{prefix} У вас нет разрешения &c{permission}"
+
+#-----=====[ Player Message ]=====-----#
+
+Player:
+  Target_Offline: 
+  - "{prefix} Этот игрок не в сети!"
+
+#-----=====[ File Message ]=====-----#
+
+File:
+  Not_Exists: 
+  - "{prefix} Этот файл не существует!"
+  
+#-----=====[ Database Message ]=====-----#
+
+Database:
+  Connection_Failed_Retrieve: "Не удалось получить подключение к базе данных"
+  Connection_Failed_Close: "Не удалось закрыть соединение с базой данных"
+  Statement_Failed_Execute: "Не удалось выполнить запрос к базе данных"
+  Library_Not_Exists: "Библиотека баз данных не существует"
+  SQL_Table_Not_Exists: "Ошибка базы данных SQL: таблица не найдена"
+
+#-----=====[ Location Message ]=====-----#
+
+Location:
+  Coordinate: 
+  - "&7x: &d{x}&7, y: &d{y}&7,z: &d{z}"  
+
+#-----=====[ Slot Type ]=====-----#
+
+Slot_Type:
+  Weapon: "Weapon"
+  Armor: "Armor"
+  Universal: "Universal"
+
+#-----=====[ Time Message ]=====-----#
+
+Time:
+  Years: "лет"
+  Weeks: "месяцев"
+  Days: "дней"
+  Hours: "часов"
+  Minutes: "минут"
+  Seconds: "секунд"

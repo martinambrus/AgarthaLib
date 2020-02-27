@@ -1,0 +1,21 @@
+main: com.praya.agarthalib.AgarthaLib
+name: AgarthaLib
+version: 2.17.2
+api-version: 1.13
+website: https://www.spigotmc.org/resources/authors/70791
+author: Praya Amadiga Pitasa
+softdepend:
+- PlaceholderAPI
+- MVdWPlaceholderAPI
+
+commands:
+  agarthalib:
+    description: AgarthaLib base command
+    aliases:
+    - agartha
+    
+permissions:
+  agarthalib.admin:
+    description: Gives access to everything!
+    children:
+      agarthalib.command.reload: true

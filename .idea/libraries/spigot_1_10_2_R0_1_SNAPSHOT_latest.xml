@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="spigot-1.10.2-R0.1-SNAPSHOT-latest">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.10.2-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.12.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.13.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.14.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.15.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.10.2-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.12.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.13.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.14.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.15.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spigot-1.9.4-R0.1-SNAPSHOT-latest.jar!/" />
+    </SOURCES>
+  </library>
+</component>

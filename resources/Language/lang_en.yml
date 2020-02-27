@@ -1,0 +1,258 @@
+#-----=====[ Metrics Message ]=====-----#
+
+Metrics:
+  Success:
+  - "{prefix} Success to submit stats metrics"
+  Failed: 
+  - "{prefix} Failed to submit stats metrics"
+
+#-----=====[ Hook Message ]=====-----#
+
+Hook:
+  Header: 
+  - "{prefix} &8&l&m=-=-=-=-=-=-=-=-=-=-=&r &2{plugin} Dependencies &8&l&m=-=-=-=-=-=-=-=-=-=-="
+  Footer: 
+  - "{prefix} &8&l&m=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+  Soft_Dependency_Header: 
+  - "{prefix} &5Soft-Dependency&f:"
+  Soft_Dependency_List: 
+  - "{prefix} &5- &d{hook} &8[{status}&8]"
+  Hard_Dependency_Header: 
+  - "{prefix} &5Hard-Dependency&f:"
+  Hard_Dependency_List: 
+  - "{prefix} &5- &d{hook} &8[{status}&8]"
+  Status_Hooked: 
+  - "&4Hooked"
+  Status_Not_Hook: 
+  - "&4Not-Hooked"
+  Outdated:
+  - "{prefix} Please install &c{plugin} &rto the latest version!"
+
+#-----=====[ Updater Message ]=====-----#
+
+Updater:
+  Button_Help: "&4&l?"
+  Button_Spigot: "&cSpigot"
+  Button_Discord: "&cDiscord"
+  Button_Patreon: "&cPatreon"
+  Button_Menu: "&cMenu"
+  Button_Website: "&6LINK"
+  Tooltip_Help:
+  - "&6&lPlugin Updater"
+  - "&eYour server using Agartha Plugin"
+  - "&eIf some of the plugins are outdated"
+  - "&ePlease update plugin to the newest version"
+  Tooltip_Spigot:
+  - "&8[&a&lSpigot&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bClick: &fVisit author's spigot homepage {sign_done} &8]"
+  Tooltip_Discord:
+  - "&8[&a&lDiscord&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bClick: &fVisit author's discord channel {sign_done} &8]"
+  Tooltip_Patreon:
+  - "&8[&a&lPatreon&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bClick: &fVisit author's patreon homepage {sign_done} &8]"
+  Tooltip_Menu:
+  - "&8[&a&lMenu&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bClick: &fOpen plugin menu {sign_done} &8]"
+  Tooltip_Website:
+  - "&8[&a&lWebsite&8]"
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bClick: &fOpen plugin website {sign_done} &8]"
+  Message_Join:
+  - "&8&l&m==========&r &2&lAgartha Plugin &8&l&m=========="
+  - ""
+  - "&2&lDescription: &8&l[{tooltip_help}&8&l]"
+  - "&2&l{icon_arrow_right} &aAuthor: &7{plugin_author}"
+  - "&2&l{icon_arrow_right} &aInstalled: &7{plugin_installed} plugins"
+  - "&2&l{icon_arrow_right} &aOutdated: &7{plugin_outdated} plugins"
+  - ""
+  - "&8&l[{tooltip_spigot}&8&l] - [{tooltip_discord}&8&l] - [{tooltip_patreon}&8&l] - [{tooltip_menu}&8&l]"
+  - ""
+  - "&8&l&m==========&r &2&lAgartha Plugin &8&l&m=========="
+  Message_About:
+  - "&8&l&m==========&r &2&lPlugin About &8&l&m=========="
+  - ""
+  - "&2&lDescription:"
+  - "&2&l{icon_arrow_right} &aName: &7{plugin_name}"
+  - "&2&l{icon_arrow_right} &aAuthor: &7{plugin_author}"
+  - "&2&l{icon_arrow_right} &aVersion: &7{plugin_version}"
+  - "&2&l{icon_arrow_right} &aPrice: &e{plugin_price}"
+  - "&2&l{icon_arrow_right} &aWebsite: &8&l[{tooltip_website}&8&l]"
+  - ""
+  - "&8&l&m==========&r &2&lPlugin About &8&l&m=========="
+  Status_Latest:
+  - "&2Latest"
+  Status_Outdated:
+  - "&cOutdated"
+  Status_Not_Installed:
+  - "&4Not-Installed"
+  Price_Premium:
+  - "&e{plugin_price_value} {plugin_price_symbol}"
+  Price_Free: 
+  - "&cFree" 
+  Failed:
+  - "{prefix} Failed connect to get plugin updater"
+
+#-----=====[ Plugin Message ]=====-----#
+
+Plugin:
+  Deactivated:
+  - "{prefix} Plugin was deactivated from control panel"
+  Information_Not_Match:
+  - "{prefix} Information of plugin doesn't match!"
+  Lack_Dependency:
+  - "{prefix} To make this plugin work, you need to install &c{dependency}"
+
+#-----=====[ Command Message ]=====-----#
+
+Command:
+  AgarthaLib_Reload_Success:
+  - "{prefix} Success reload data config!"
+  
+#-----=====[ Argument Message ]=====-----#
+
+Argument:
+  Invalid:
+  - "{prefix} Argument command is invalid!"
+  AgarthaLib_Help: 
+  - "{tooltip_help} &3/agarthalib help &b[<page>]"
+  AgarthaLib_About: 
+  - "{tooltip_about} &3/agarthalib about"
+  AgarthaLib_Menu: 
+  - "{tooltip_menu} &3/agarthalib menu"
+  AgarthaLib_Reload: 
+  - "{tooltip_reload} &3/agarthalib reload"
+
+#-----=====[ Tooltip Message ]=====-----#
+
+Tooltip:
+  AgarthaLib_Help: "Show all command from the plugin"
+  AgarthaLib_About: "Show all information about the plugin"
+  AgarthaLib_Menu: "Open plugin menu"
+  AgarthaLib_Reload: "Reload data config"
+  
+#-----=====[ Help Message ]=====-----#
+
+Help:
+  Header: 
+  - "&6{plugin} Help:"
+  Page: 
+  - "&8&l[&6&l{previous}&8&l]&r&8&l&m=======&r&8&l[&r &2Page &7(&d{page}&7/&d{maxpage}&7) &8&l]&8&l&m=======&r&8&l[&6&l{next}&8&l]"
+  Previous_Page: 
+  - "&cPrevious Page"
+  Next_Page:
+  - "&cNext Page"
+  
+#-----=====[ Menu Message ]=====-----#
+
+Menu:
+  Page_Title_Home: "&9&lHome Page"
+  Page_Title_Updater: "&2&lAgartha &0[&4{page}&8/&4{maxpage}&0]"
+  Item_Header_Plugin: "&8[&2{plugin_name}&8]"
+  Item_Header_Next: "&8[&aNext&8]"
+  Item_Header_Previous: "&8[&aPrevious&8]"
+  Item_Lores_Plugin_Installed:
+  - "&8&m-------------------------"
+  - ""
+  - "&2&l{icon_arrow_right} &6Status: &r{plugin_status}"
+  - "&2&l{icon_arrow_right} &6Type: &a{plugin_type}"
+  - "&2&l{icon_arrow_right} &6Version: &7{plugin_version}"
+  - "&2&l{icon_arrow_right} &6Latest: &7{plugin_latest}"
+  - ""
+  - "&8[ &bClick: &fTo show more detail {sign_done} &8]"
+  Item_Lores_Plugin_Not_Installed:
+  - "&8&m-------------------------"
+  - ""
+  - "&2&l{icon_arrow_right} &6Status: &r{plugin_status}"
+  - "&2&l{icon_arrow_right} &6Type: &a{plugin_type}"
+  - ""
+  - "&8[ &bClick: &fTo show more detail {sign_done} &8]"
+  Item_Lores_Next:
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bClick: &fChange to next page {sign_done} &8]"
+  Item_Lores_Previous:
+  - "&8&m-------------------------"
+  - ""
+  - "&8[ &bClick: &fChange to previous page {sign_done} &8]"
+  
+#-----=====[ Console Message ]=====-----#
+
+Console:
+  Not_Player:
+  - "{prefix} Only player can execute this command!"
+
+#-----=====[ Character Message ]=====-----#
+
+Character:
+  False_Pattern:
+  - "{prefix} Cannot contain special character!"
+
+#-----=====[ List Message ]=====-----#
+
+List:
+  Header: 
+  - "&7&l&m---&8&l&m==[&r &2List &7(&d{page}&8/&d{maxpage}&7) &8&l&m]==&7&l&m---"
+  Container: 
+  - "&8&l[&2&l{index}&8&l] &c{container}"
+  Item: 
+  - "&8&l[&2&l{index}&8&l] &c{item} {tooltip}" 
+
+#-----=====[ Permission Message ]=====-----#
+
+Permission:
+  Lack: 
+  - "{prefix} You don't have permission &c{permission}"
+
+#-----=====[ Player Message ]=====-----#
+
+Player:
+  Target_Offline: 
+  - "{prefix} Target player is not online!"
+
+#-----=====[ File Message ]=====-----#
+
+File:
+  Not_Exists: 
+  - "{prefix} File target doesn't exist!"
+  
+#-----=====[ Database Message ]=====-----#
+
+Database:
+  Connection_Failed_Retrieve: "Unable to retrieve database connection"
+  Connection_Failed_Close: "Failed to close database connection"
+  Statement_Failed_Execute: "Couldn't execute database statement"
+  Library_Not_Exists: "Database library is not exists"
+  SQL_Table_Not_Exists: "Database SQL Error: No Table Found"
+
+#-----=====[ Location Message ]=====-----#
+
+Location:
+  Coordinate: 
+  - "&7x: &d{x}&7, y: &d{y}&7,z: &d{z}"  
+
+#-----=====[ Slot Type ]=====-----#
+
+Slot_Type:
+  Weapon: "Weapon"
+  Armor: "Armor"
+  Universal: "Universal"
+
+#-----=====[ Time Message ]=====-----#
+
+Time:
+  Years: "years"
+  Weeks: "weeks"
+  Days: "days"
+  Hours: "hours"
+  Minutes: "minutes"
+  Seconds: "seconds"

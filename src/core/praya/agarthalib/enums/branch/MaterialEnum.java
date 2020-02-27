@@ -1,0 +1,1189 @@
+// 
+// Decompiled by Procyon v0.5.36
+// 
+
+package core.praya.agarthalib.enums.branch;
+
+import com.praya.agarthalib.utility.MathUtil;
+import org.bukkit.block.Block;
+import org.bukkit.Location;
+import org.bukkit.inventory.ItemStack;
+import com.praya.agarthalib.utility.ServerUtil;
+import org.bukkit.Material;
+
+public enum MaterialEnum
+{
+    ACACIA_BOAT("ACACIA_BOAT", 0, "BOAT_ACACIA", 0, false, false), 
+    ACACIA_BUTTON("ACACIA_BUTTON", 1, "WOOD_BUTTON", 0, false, false), 
+    ACACIA_DOOR("ACACIA_DOOR", 2, "ACACIA_DOOR", 0, true, false), 
+    ACACIA_FENCE("ACACIA_FENCE", 3, "ACACIA_FENCE", 0, true, false), 
+    ACACIA_FENCE_GATE("ACACIA_FENCE_GATE", 4, "ACACIA_FENCE_GATE", 0, true, false), 
+    ACACIA_LEAVES("ACACIA_LEAVES", 5, "LEAVES_2", 0, true, false), 
+    ACACIA_LOG("ACACIA_LOG", 6, "LOG_2", 0, true, false), 
+    ACACIA_PLANKS("ACACIA_PLANKS", 7, "WOOD", 4, true, false), 
+    ACACIA_PRESSURE_PLATE("ACACIA_PRESSURE_PLATE", 8, "WOOD_PLATE", 0, false, false), 
+    ACACIA_SAPLING("ACACIA_SAPLING", 9, "SAPLING", 4, false, false), 
+    ACACIA_SLAB("ACACIA_SLAB", 10, "WOOD_STEP", 4, true, false), 
+    ACACIA_STAIRS("ACACIA_STAIRS", 11, "ACACIA_STAIRS", 4, true, false), 
+    ACACIA_TRAPDOOR("ACACIA_TRAPDOOR", 12, "TRAP_DOOR", 0, true, false), 
+    ACACIA_WOOD("ACACIA_WOOD", 13, "LOG_2", 0, true, false), 
+    ACTIVATOR_RAIL("ACTIVATOR_RAIL", 14, "ACTIVATOR_RAIL", 0, false, false), 
+    AIR("AIR", 15, "AIR", 0, false, false), 
+    ALLIUM("ALLIUM", 16, "RED_ROSE", 2, false, false), 
+    ANDESITE("ANDESITE", 17, "STONE", 5, true, false), 
+    ANVIL("ANVIL", 18, "ANVIL", 0, true, false), 
+    APPLE("APPLE", 19, "APPLE", 0, false, false), 
+    ARMOR_STAND("ARMOR_STAND", 20, "ARMOR_STAND", 0, false, false), 
+    ARROW("ARROW", 21, "ARROW", 0, false, false), 
+    ATTACHED_MELON_STEM("ATTACHED_MELON_STEM", 22, "MELON_STEM", 7, true, false), 
+    ATTACHED_PUMPKIN_STEM("ATTACHED_PUMPKIN_STEM", 23, "PUMPKIN_STEM", 7, true, false), 
+    AZURE_BLUET("AZURE_BLUET", 24, "RED_ROSE", 3, false, false), 
+    BAKED_POTATO("BAKED_POTATO", 25, "BAKED_POTATO", 0, false, false), 
+    BARRIER("BARRIER", 26, "BARRIER", 0, true, false), 
+    BAT_SPAWN_EGG("BAT_SPAWN_EGG", 27, "MONSTER_EGG", 0, false, false), 
+    BEACON("BEACON", 28, "BEACON", 0, true, false), 
+    BEDROCK("BEDROCK", 29, "BEDROCK", 0, true, false), 
+    BEEF("BEEF", 30, "RAW_BEEF", 0, true, false), 
+    BEETROOT("BEETROOT", 31, "BEETROOT", 0, false, false), 
+    BEETROOTS("BEETROOTS", 32, "BEETROOT_BLOCK", 0, false, false), 
+    BEETROOT_SEEDS("BEETROOT_SEEDS", 33, "BEETROOT_SEEDS", 0, false, false), 
+    BEETROOT_SOUP("BEETROOT_SOUP", 34, "BEETROOT_SOUP", 0, false, false), 
+    BIRCH_BOAT("BIRCH_BOAT", 35, "BOAT_BIRCH", 0, false, false), 
+    BIRCH_BUTTON("BIRCH_BUTTON", 36, "WOOD_BUTTON", 0, false, false), 
+    BIRCH_DOOR("BIRCH_DOOR", 37, "BIRCH_DOOR", 0, true, false), 
+    BIRCH_FENCE("BIRCH_FENCE", 38, "BIRCH_FENCE", 0, true, false), 
+    BIRCH_FENCE_GATE("BIRCH_FENCE_GATE", 39, "BIRCH_FENCE_GATE", 0, true, false), 
+    BIRCH_LEAVES("BIRCH_LEAVES", 40, "LEAVES", 2, true, false), 
+    BIRCH_LOG("BIRCH_LOG", 41, "LOG", 2, true, false), 
+    BIRCH_PLANKS("BIRCH_PLANKS", 42, "WOOD", 2, true, false), 
+    BIRCH_PRESSURE_PLATE("BIRCH_PRESSURE_PLATE", 43, "WOOD_PLATE", 0, false, false), 
+    BIRCH_SAPLING("BIRCH_SAPLING", 44, "SAPLING", 2, false, false), 
+    BIRCH_SLAB("BIRCH_SLAB", 45, "WOOD_STEP", 2, true, false), 
+    BIRCH_STAIRS("BIRCH_STAIRS", 46, "BIRCH_WOOD_STAIRS", 0, true, false), 
+    BIRCH_TRAPDOOR("BIRCH_TRAPDOOR", 47, "TRAP_DOOR", 0, true, false), 
+    BIRCH_WOOD("BIRCH_WOOD", 48, "LOG", 2, true, false), 
+    BLACK_BANNER("BLACK_BANNER", 49, "BANNER", 0, false, false), 
+    BLACK_BED("BLACK_BED", 50, "BED", 15, true, false), 
+    BLACK_CARPET("BLACK_CARPET", 51, "CARPET", 15, false, false), 
+    BLACK_CONCRETE("BLACK_CONCRETE", 52, "CONCRETE", 15, true, false), 
+    BLACK_CONCRETE_POWDER("BLACK_CONCRETE_POWDER", 53, "CONCRETE_POWDER", 15, true, false), 
+    BLACK_GLAZED_TERRACOTTA("BLACK_GLAZED_TERRACOTTA", 54, "BLACK_GLAZED_TERRACOTTA", 0, true, false), 
+    BLACK_SHULKER_BOX("BLACK_SHULKER_BOX", 55, "BLACK_SHULKER_BOX", 0, true, false), 
+    BLACK_STAINED_GLASS("BLACK_STAINED_GLASS", 56, "STAINED_GLASS", 15, true, false), 
+    BLACK_STAINED_GLASS_PANE("BLACK_STAINED_GLASS_PANE", 57, "STAINED_GLASS_PANE", 15, true, false), 
+    BLACK_TERRACOTTA("BLACK_TERRACOTTA", 58, "STAINED_CLAY", 15, true, false), 
+    BLACK_WALL_BANNER("BLACK_WALL_BANNER", 59, "WALL_BANNER", 0, true, false), 
+    BLACK_WOOL("BLACK_WOOL", 60, "WOOL", 15, true, false), 
+    BLAZE_POWDER("BLAZE_POWDER", 61, "BLAZE_POWDER", 0, false, false), 
+    BLAZE_ROD("BLAZE_ROD", 62, "BLAZE_ROD", 0, false, false), 
+    BLAZE_SPAWN_EGG("BLAZE_SPAWN_EGG", 63, "MONSTER_EGG", 0, false, false), 
+    BLUE_BANNER("BLUE_BANNER", 64, "BANNER", 11, false, false), 
+    BLUE_BED("BLUE_BED", 65, "BED", 4, true, false), 
+    BLUE_CARPET("BLUE_CARPET", 66, "CARPET", 11, false, false), 
+    BLUE_CONCRETE("BLUE_CONCRETE", 67, "CONCRETE", 11, true, false), 
+    BLUE_CONCRETE_POWDER("BLUE_CONCRETE_POWDER", 68, "CONCRETE_POWDER", 11, true, false), 
+    BLUE_GLAZED_TERRACOTTA("BLUE_GLAZED_TERRACOTTA", 69, "BLUE_GLAZED_TERRACOTTA", 0, true, false), 
+    BLUE_ICE("BLUE_ICE", 70, "PACKED_ICE", 0, true, false), 
+    BLUE_ORCHID("BLUE_ORCHID", 71, "RED_ROSE", 1, false, false), 
+    BLUE_SHULKER_BOX("BLUE_SHULKER_BOX", 72, "BLUE_SHULKER_BOX", 0, true, false), 
+    BLUE_STAINED_GLASS("BLUE_STAINED_GLASS", 73, "STAINED_GLASS", 11, true, false), 
+    BLUE_STAINED_GLASS_PANE("BLUE_STAINED_GLASS_PANE", 74, "STAINED_GLASS_PANE", 11, true, false), 
+    BLUE_TERRACOTTA("BLUE_TERRACOTTA", 75, "STAINED_CLAY", 11, true, false), 
+    BLUE_WALL_BANNER("BLUE_WALL_BANNER", 76, "WALL_BANNER", 11, false, false), 
+    BLUE_WOOL("BLUE_WOOL", 77, "WOOL", 11, true, false), 
+    BONE("BONE", 78, "BONE", 0, false, false), 
+    BONE_BLOCK("BONE_BLOCK", 79, "BONE_BLOCK", 0, true, false), 
+    BONE_MEAL("BONE_MEAL", 80, "INK_SACK", 15, false, false), 
+    BOOK("BOOK", 81, "BOOK", 0, true, false), 
+    BOOKSHELF("BOOKSHELF", 82, "BOOKSHELF", 0, true, false), 
+    BOW("BOW", 83, "BOW", 0, false, true), 
+    BOWL("BOWL", 84, "BOWL", 0, false, false), 
+    BRAIN_CORAL("BRAIN_CORAL", 85, (String)null, 0, true, false), 
+    BRAIN_CORAL_BLOCK("BRAIN_CORAL_BLOCK", 86, (String)null, 0, true, false), 
+    BRAIN_CORAL_FAN("BRAIN_CORAL_FAN", 87, (String)null, 0, true, false), 
+    BREAD("BREAD", 88, "BREAD", 0, false, false), 
+    BREWING_STAND("BREWING_STAND", 89, "BREWING_STAND", 0, false, false), 
+    BRICK("BRICK", 90, "CLAY_BRICK", 0, true, false), 
+    BRICKS("BRICKS", 91, "BRICK", 0, true, false), 
+    BRICK_SLAB("BRICK_SLAB", 92, "STEP", 4, true, false), 
+    BRICK_STAIRS("BRICK_STAIRS", 93, "BRICK_STAIRS", 0, true, false), 
+    BROWN_BANNER("BROWN_BANNER", 94, "BANNER", 3, false, false), 
+    BROWN_BED("BROWN_BED", 95, "BED", 12, true, false), 
+    BROWN_CARPET("BROWN_CARPET", 96, "CARPET", 12, false, false), 
+    BROWN_CONCRETE("BROWN_CONCRETE", 97, "CONCRETE", 12, true, false), 
+    BROWN_CONCRETE_POWDER("BROWN_CONCRETE_POWDER", 98, "CONCRETE_POWDER", 12, true, false), 
+    BROWN_GLAZED_TERRACOTTA("BROWN_GLAZED_TERRACOTTA", 99, "BROWN_GLAZED_TERRACOTTA", 0, true, false), 
+    BROWN_MUSHROOM("BROWN_MUSHROOM", 100, "BROWN_MUSHROOM", 0, false, false), 
+    BROWN_MUSHROOM_BLOCK("BROWN_MUSHROOM_BLOCK", 101, "HUGE_MUSHROOM_1", 0, true, false), 
+    BROWN_SHULKER_BOX("BROWN_SHULKER_BOX", 102, "BROWN_SHULKER_BOX", 0, true, false), 
+    BROWN_STAINED_GLASS("BROWN_STAINED_GLASS", 103, "STAINED_GLASS", 12, true, false), 
+    BROWN_STAINED_GLASS_PANE("BROWN_STAINED_GLASS_PANE", 104, "STAINED_GLASS_PANE", 12, true, false), 
+    BROWN_TERRACOTTA("BROWN_TERRACOTTA", 105, "STAINED_CLAY", 12, true, false), 
+    BROWN_WALL_BANNER("BROWN_WALL_BANNER", 106, "WALL_BANNER", 3, false, false), 
+    BROWN_WOOL("BROWN_WOOL", 107, "WOOL", 12, true, false), 
+    BUBBLE_COLUMN("BUBBLE_COLUMN", 108, (String)null, 0, false, false), 
+    BUBBLE_CORAL("BUBBLE_CORAL", 109, (String)null, 0, true, false), 
+    BUBBLE_CORAL_BLOCK("BUBBLE_CORAL_BLOCK", 110, (String)null, 0, true, false), 
+    BUBBLE_CORAL_FAN("BUBBLE_CORAL_FAN", 111, (String)null, 0, true, false), 
+    BUCKET("BUCKET", 112, "BUCKET", 0, false, false), 
+    CACTUS("CACTUS", 113, "CACTUS", 0, true, false), 
+    CACTUS_GREEN("CACTUS_GREEN", 114, "INK_SACK", 2, false, false), 
+    CAKE("CAKE", 115, "CAKE", 0, false, false), 
+    CARROT("CARROT", 116, "CARROT_ITEM", 0, false, false), 
+    CARROTS("CARROTS", 117, "CARROT", 0, false, false), 
+    CARROT_ON_A_STICK("CARROT_ON_A_STICK", 118, "CARROT_STICK", 0, false, false), 
+    CARVED_PUMPKIN("CARVED_PUMPKIN", 119, "PUMPKIN", 0, true, false), 
+    CAULDRON("CAULDRON", 120, "CAULDRON", 0, true, false), 
+    CAVE_AIR("CAVE_AIR", 121, "AIR", 0, false, false), 
+    CAVE_SPIDER_SPAWN_EGG("CAVE_SPIDER_SPAWN_EGG", 122, "MONSTER_EGG", 0, false, false), 
+    CHAINMAIL_BOOTS("CHAINMAIL_BOOTS", 123, "CHAINMAIL_BOOTS", 0, false, true), 
+    CHAINMAIL_CHESTPLATE("CHAINMAIL_CHESTPLATE", 124, "CHAINMAIL_CHESTPLATE", 0, false, true), 
+    CHAINMAIL_HELMET("CHAINMAIL_HELMET", 125, "CHAINMAIL_HELMET", 0, false, true), 
+    CHAINMAIL_LEGGINGS("CHAINMAIL_LEGGINGS", 126, "CHAINMAIL_LEGGINGS", 0, false, true), 
+    CHAIN_COMMAND_BLOCK("CHAIN_COMMAND_BLOCK", 127, "COMMAND_CHAIN", 0, true, false), 
+    CHARCOAL("CHARCOAL", 128, "COAL", 1, false, false), 
+    CHEST("CHEST", 129, "CHEST", 0, true, false), 
+    CHEST_MINECART("CHEST_MINECART", 130, "STORAGE_MINECART", 0, true, false), 
+    CHICKEN("CHICKEN", 131, "RAW_CHICKEN", 0, false, false), 
+    CHICKEN_SPAWN_EGG("CHICKEN_SPAWN_EGG", 132, "MONSTER_EGG", 0, false, false), 
+    CHIPPED_ANVIL("CHIPPED_ANVIL", 133, "ANVIL", 1, true, false), 
+    CHISELED_QUARTZ_BLOCK("CHISELED_QUARTZ_BLOCK", 134, "QUARTZ_BLOCK", 1, true, false), 
+    CHISELED_RED_SANDSTONE("CHISELED_RED_SANDSTONE", 135, "RED_SANDSTONE", 1, true, false), 
+    CHISELED_SANDSTONE("CHISELED_SANDSTONE", 136, "SANDSTONE", 1, true, false), 
+    CHISELED_STONE_BRICKS("CHISELED_STONE_BRICKS", 137, "SMOOTH_BRICK", 3, true, false), 
+    CHORUS_FLOWER("CHORUS_FLOWER", 138, "CHORUS_FLOWER", 0, true, false), 
+    CHORUS_FRUIT("CHORUS_FRUIT", 139, "CHORUS_FRUIT", 0, false, false), 
+    CHORUS_PLANT("CHORUS_PLANT", 140, "CHORUS_PLANT", 0, true, false), 
+    CLAY("CLAY", 141, "CLAY", 0, true, false), 
+    CLAY_BALL("CLAY_BALL", 142, "CLAY_BALL", 0, false, false), 
+    CLOCK("CLOCK", 143, "WATCH", 0, false, false), 
+    COAL("COAL", 144, "COAL", 0, false, false), 
+    COAL_BLOCK("COAL_BLOCK", 145, "COAL_BLOCK", 0, true, false), 
+    COAL_ORE("COAL_ORE", 146, "COAL_ORE", 0, true, false), 
+    COARSE_DIRT("COARSE_DIRT", 147, "DIRT", 1, true, false), 
+    COBBLESTONE("COBBLESTONE", 148, "COBBLESTONE", 0, true, false), 
+    COBBLESTONE_SLAB("COBBLESTONE_SLAB", 149, "STEP", 3, true, false), 
+    COBBLESTONE_STAIRS("COBBLESTONE_STAIRS", 150, "COBBLESTONE_STAIRS", 0, true, false), 
+    COBBLESTONE_WALL("COBBLESTONE_WALL", 151, "COBBLE_WALL", 0, true, false), 
+    COBWEB("COBWEB", 152, "WEB", 0, false, false), 
+    COCOA("COCOA", 153, "COCOA", 0, true, false), 
+    COCOA_BEANS("COCOA_BEANS", 154, "INK_SACK", 3, false, false), 
+    COD("COD", 155, "RAW_FISH", 0, false, false), 
+    COD_BUCKET("COD_BUCKET", 156, "BUCKET", 0, false, false), 
+    COD_SPAWN_EGG("COD_SPAWN_EGG", 157, "MONSTER_EGG", 0, false, false), 
+    COMMAND_BLOCK("COMMAND_BLOCK", 158, "COMMAND", 0, true, false), 
+    COMMAND_BLOCK_MINECART("COMMAND_BLOCK_MINECART", 159, "COMMAND_MINECART", 0, true, false), 
+    COMPARATOR("COMPARATOR", 160, "REDSTONE_COMPARATOR", 0, false, false), 
+    COMPASS("COMPASS", 161, "COMPASS", 0, false, false), 
+    CONDUIT("CONDUIT", 162, (String)null, 0, false, false), 
+    COOKED_BEEF("COOKED_BEEF", 163, "COOKED_BEEF", 0, false, false), 
+    COOKED_CHICKEN("COOKED_CHICKEN", 164, "COOKED_CHICKEN", 0, false, false), 
+    COOKED_COD("COOKED_COD", 165, "COOKED_FISH", 0, false, false), 
+    COOKED_MUTTON("COOKED_MUTTON", 166, "COOKED_MUTTON", 0, false, false), 
+    COOKED_PORKCHOP("COOKED_PORKCHOP", 167, "GRILLED_PORK", 0, false, false), 
+    COOKED_RABBIT("COOKED_RABBIT", 168, "COOKED_RABBIT", 0, false, false), 
+    COOKED_SALMON("COOKED_SALMON", 169, "COOKED_FISH", 1, false, false), 
+    COOKIE("COOKIE", 170, "COOKIE", 0, false, false), 
+    COW_SPAWN_EGG("COW_SPAWN_EGG", 171, "MONSTER_EGG", 0, false, false), 
+    CRACKED_STONE_BRICKS("CRACKED_STONE_BRICKS", 172, "SMOOTH_BRICK", 2, true, false), 
+    CRAFTING_TABLE("CRAFTING_TABLE", 173, "WORKBENCH", 0, true, false), 
+    CREEPER_HEAD("CREEPER_HEAD", 174, "SKULL_ITEM", 4, true, false), 
+    CREEPER_SPAWN_EGG("CREEPER_SPAWN_EGG", 175, "MONSTER_EGG", 0, false, false), 
+    CREEPER_WALL_HEAD("CREEPER_WALL_HEAD", 176, "SKULL_ITEM", 4, true, false), 
+    CROPS("CROPS", 177, "WHEAT", "CROPS", 0, false, false), 
+    CUT_RED_SANDSTONE("CUT_RED_SANDSTONE", 178, (String)null, 0, true, false), 
+    CUT_SANDSTONE("CUT_SANDSTONE", 179, (String)null, 0, true, false), 
+    CYAN_BANNER("CYAN_BANNER", 180, "BANNER", 6, false, false), 
+    CYAN_BED("CYAN_BED", 181, "BED", 9, true, false), 
+    CYAN_CARPET("CYAN_CARPET", 182, "CARPET", 9, false, false), 
+    CYAN_CONCRETE("CYAN_CONCRETE", 183, "CONCRETE", 9, true, false), 
+    CYAN_CONCRETE_POWDER("CYAN_CONCRETE_POWDER", 184, "CONCRETE_POWDER", 9, true, false), 
+    CYAN_DYE("CYAN_DYE", 185, "INK_SACK", 6, false, false), 
+    CYAN_GLAZED_TERRACOTTA("CYAN_GLAZED_TERRACOTTA", 186, "CYAN_GLAZED_TERRACOTTA", 0, true, false), 
+    CYAN_SHULKER_BOX("CYAN_SHULKER_BOX", 187, "CYAN_SHULKER_BOX", 0, true, false), 
+    CYAN_STAINED_GLASS("CYAN_STAINED_GLASS", 188, "STAINED_GLASS", 9, true, false), 
+    CYAN_STAINED_GLASS_PANE("CYAN_STAINED_GLASS_PANE", 189, "STAINED_GLASS_PANE", 9, true, false), 
+    CYAN_TERRACOTTA("CYAN_TERRACOTTA", 190, "STAINED_CLAY", 9, true, false), 
+    CYAN_WALL_BANNER("CYAN_WALL_BANNER", 191, "WALL_BANNER", 0, false, false), 
+    CYAN_WOOL("CYAN_WOOL", 192, "WOOL", 9, true, false), 
+    DAMAGED_ANVIL("DAMAGED_ANVIL", 193, "ANVIL", 2, true, false), 
+    DANDELION("DANDELION", 194, "YELLOW_FLOWER", 0, false, false), 
+    DANDELION_YELLOW("DANDELION_YELLOW", 195, "INK_SACK", 11, false, false), 
+    DARK_OAK_BOAT("DARK_OAK_BOAT", 196, "BOAT_DARK_OAK", 0, false, false), 
+    DARK_OAK_BUTTON("DARK_OAK_BUTTON", 197, "WOOD_BUTTON", 0, false, false), 
+    DARK_OAK_DOOR("DARK_OAK_DOOR", 198, "DARK_OAK_DOOR", 0, true, false), 
+    DARK_OAK_FENCE("DARK_OAK_FENCE", 199, "DARK_OAK_FENCE", 0, true, false), 
+    DARK_OAK_FENCE_GATE("DARK_OAK_FENCE_GATE", 200, "DARK_OAK_FENCE_GATE", 0, true, false), 
+    DARK_OAK_LEAVES("DARK_OAK_LEAVES", 201, "LEAVES_2", 1, true, false), 
+    DARK_OAK_LOG("DARK_OAK_LOG", 202, "LOG_2", 1, true, false), 
+    DARK_OAK_PLANKS("DARK_OAK_PLANKS", 203, "WOOD", 5, true, false), 
+    DARK_OAK_PRESSURE_PLATE("DARK_OAK_PRESSURE_PLATE", 204, "WOOD_PLATE", 0, false, false), 
+    DARK_OAK_SAPLING("DARK_OAK_SAPLING", 205, "SAPLING", 5, false, false), 
+    DARK_OAK_SLAB("DARK_OAK_SLAB", 206, "WOOD_STEP", 0, true, false), 
+    DARK_OAK_STAIRS("DARK_OAK_STAIRS", 207, "DARK_OAK_STAIRS", 0, true, false), 
+    DARK_OAK_TRAPDOOR("DARK_OAK_TRAPDOOR", 208, "TRAP_DOOR", 0, true, false), 
+    DARK_OAK_WOOD("DARK_OAK_WOOD", 209, "LOG_2", 1, true, false), 
+    DARK_PRISMARINE("DARK_PRISMARINE", 210, "PRISMARINE", 2, true, false), 
+    DARK_PRISMARINE_SLAB("DARK_PRISMARINE_SLAB", 211, (String)null, 0, true, false), 
+    DARK_PRISMARINE_STAIRS("DARK_PRISMARINE_STAIRS", 212, (String)null, 0, true, false), 
+    DAYLIGHT_DETECTOR("DAYLIGHT_DETECTOR", 213, "DAYLIGHT_DETECTOR", 0, true, false), 
+    DEAD_BRAIN_CORAL_BLOCK("DEAD_BRAIN_CORAL_BLOCK", 214, (String)null, 0, true, false), 
+    DEAD_BUBBLE_CORAL_BLOCK("DEAD_BUBBLE_CORAL_BLOCK", 215, (String)null, 0, true, false), 
+    DEAD_BUSH("DEAD_BUSH", 216, "DEAD_BUSH", 0, false, false), 
+    DEAD_FIRE_CORAL_BLOCK("DEAD_FIRE_CORAL_BLOCK", 217, (String)null, 0, true, false), 
+    DEAD_HORN_CORAL_BLOCK("DEAD_HORN_CORAL_BLOCK", 218, (String)null, 0, true, false), 
+    DEAD_TUBE_CORAL_BLOCK("DEAD_TUBE_CORAL_BLOCK", 219, (String)null, 0, true, false), 
+    DEBUG_STICK("DEBUG_STICK", 220, "STICK", 0, false, false), 
+    DETECTOR_RAIL("DETECTOR_RAIL", 221, "DETECTOR_RAIL", 0, false, false), 
+    DIAMOND("DIAMOND", 222, "DIAMOND", 0, false, false), 
+    DIAMOND_AXE("DIAMOND_AXE", 223, "DIAMOND_AXE", 0, false, true), 
+    DIAMOND_BLOCK("DIAMOND_BLOCK", 224, "DIAMOND_BLOCK", 0, false, false), 
+    DIAMOND_BOOTS("DIAMOND_BOOTS", 225, "DIAMOND_BOOTS", 0, false, true), 
+    DIAMOND_CHESTPLATE("DIAMOND_CHESTPLATE", 226, "DIAMOND_CHESTPLATE", 0, false, true), 
+    DIAMOND_HELMET("DIAMOND_HELMET", 227, "DIAMOND_HELMET", 0, false, true), 
+    DIAMOND_HOE("DIAMOND_HOE", 228, "DIAMOND_HOE", 0, false, true), 
+    DIAMOND_HORSE_ARMOR("DIAMOND_HORSE_ARMOR", 229, "DIAMOND_BARDING", 0, false, true), 
+    DIAMOND_LEGGINGS("DIAMOND_LEGGINGS", 230, "DIAMOND_LEGGINGS", 0, false, true), 
+    DIAMOND_ORE("DIAMOND_ORE", 231, "DIAMOND_ORE", 0, true, false), 
+    DIAMOND_PICKAXE("DIAMOND_PICKAXE", 232, "DIAMOND_PICKAXE", 0, false, true), 
+    DIAMOND_SHOVEL("DIAMOND_SHOVEL", 233, "DIAMOND_SPADE", 0, false, true), 
+    DIAMOND_SWORD("DIAMOND_SWORD", 234, "DIAMOND_SWORD", 0, false, true), 
+    DIORITE("DIORITE", 235, "STONE", 3, true, false), 
+    DIRT("DIRT", 236, "DIRT", 0, true, false), 
+    DISPENSER("DISPENSER", 237, "DISPENSER", 0, true, false), 
+    DOLPHIN_SPAWN_EGG("DOLPHIN_SPAWN_EGG", 238, "MONSTER_EGG", 0, false, false), 
+    DONKEY_SPAWN_EGG("DONKEY_SPAWN_EGG", 239, "MONSTER_EGG", 0, false, false), 
+    DRAGON_BREATH("DRAGON_BREATH", 240, "DRAGONS_BREATH", 0, false, false), 
+    DRAGON_EGG("DRAGON_EGG", 241, "DRAGON_EGG", 0, true, false), 
+    DRAGON_HEAD("DRAGON_HEAD", 242, "SKULL_ITEM", 5, true, false), 
+    DRAGON_WALL_HEAD("DRAGON_WALL_HEAD", 243, "SKULL_ITEM", 5, true, false), 
+    DRIED_KELP("DRIED_KELP", 244, (String)null, 0, false, false), 
+    DRIED_KELP_BLOCK("DRIED_KELP_BLOCK", 245, (String)null, 0, true, false), 
+    DROPPER("DROPPER", 246, "DROPPER", 0, true, false), 
+    DROWNED_SPAWN_EGG("DROWNED_SPAWN_EGG", 247, "MONSTER_EGG", 0, false, false), 
+    EGG("EGG", 248, "EGG", 0, false, false), 
+    ELDER_GUARDIAN_SPAWN_EGG("ELDER_GUARDIAN_SPAWN_EGG", 249, "MONSTER_EGG", 0, false, false), 
+    ELYTRA("ELYTRA", 250, "ELYTRA", 0, false, true), 
+    EMERALD("EMERALD", 251, "EMERALD", 0, false, false), 
+    EMERALD_BLOCK("EMERALD_BLOCK", 252, "EMERALD_BLOCK", 0, true, false), 
+    EMERALD_ORE("EMERALD_ORE", 253, "EMERALD_ORE", 0, true, false), 
+    ENCHANTED_BOOK("ENCHANTED_BOOK", 254, "ENCHANTED_BOOK", 0, false, false), 
+    ENCHANTED_GOLDEN_APPLE("ENCHANTED_GOLDEN_APPLE", 255, "GOLDEN_APPLE", 1, false, false), 
+    ENCHANTING_TABLE("ENCHANTING_TABLE", 256, "ENCHANTMENT_TABLE", 0, true, false), 
+    ENDERMAN_SPAWN_EGG("ENDERMAN_SPAWN_EGG", 257, "MONSTER_EGG", 0, false, false), 
+    ENDERMITE_SPAWN_EGG("ENDERMITE_SPAWN_EGG", 258, "MONSTER_EGG", 0, false, false), 
+    ENDER_CHEST("ENDER_CHEST", 259, "ENDER_CHEST", 0, true, false), 
+    ENDER_EYE("ENDER_EYE", 260, "EYE_OF_ENDER", 0, false, false), 
+    ENDER_PEARL("ENDER_PEARL", 261, "ENDER_PEARL", 0, false, false), 
+    END_CRYSTAL("END_CRYSTAL", 262, "END_CRYSTAL", 0, true, false), 
+    END_GATEWAY("END_GATEWAY", 263, "END_GATEWAY", 0, true, false), 
+    END_PORTAL("END_PORTAL", 264, "ENDER_PORTAL", 0, false, false), 
+    END_PORTAL_FRAME("END_PORTAL_FRAME", 265, "ENDER_PORTAL_FRAME", 0, true, false), 
+    END_ROD("END_ROD", 266, "END_ROD", 0, true, false), 
+    END_STONE("END_STONE", 267, "ENDER_STONE", 0, true, false), 
+    END_STONE_BRICKS("END_STONE_BRICKS", 268, "END_BRICKS", 0, true, false), 
+    EVOKER_SPAWN_EGG("EVOKER_SPAWN_EGG", 269, "MONSTER_EGG", 0, false, false), 
+    EXPERIENCE_BOTTLE("EXPERIENCE_BOTTLE", 270, "EXP_BOTTLE", 0, false, false), 
+    FARMLAND("FARMLAND", 271, "SOIL", 0, true, false), 
+    FEATHER("FEATHER", 272, "FEATHER", 0, false, false), 
+    FERMENTED_SPIDER_EYE("FERMENTED_SPIDER_EYE", 273, "FERMENTED_SPIDER_EYE", 0, false, false), 
+    FERN("FERN", 274, "LONG_GRASS", 2, false, false), 
+    FILLED_MAP("FILLED_MAP", 275, "MAP", 0, false, false), 
+    FIRE("FIRE", 276, "FIRE", 0, false, false), 
+    FIREWORK_ROCKET("FIREWORK_ROCKET", 277, "FIREWORK", 0, false, false), 
+    FIREWORK_STAR("FIREWORK_STAR", 278, "FIREWORK_CHARGE", 0, false, false), 
+    FIRE_CHARGE("FIRE_CHARGE", 279, "FIREBALL", 0, false, false), 
+    FIRE_CORAL("FIRE_CORAL", 280, (String)null, 0, true, false), 
+    FIRE_CORAL_BLOCK("FIRE_CORAL_BLOCK", 281, (String)null, 0, true, false), 
+    FIRE_CORAL_FAN("FIRE_CORAL_FAN", 282, (String)null, 0, true, false), 
+    FISHING_ROD("FISHING_ROD", 283, "FISHING_ROD", 0, false, false), 
+    FLINT("FLINT", 284, "FLINT", 0, false, false), 
+    FLINT_AND_STEEL("FLINT_AND_STEEL", 285, "FLINT_AND_STEEL", 0, true, false), 
+    FLOWER_POT("FLOWER_POT", 286, "FLOWER_POT", 0, true, false), 
+    FROSTED_ICE("FROSTED_ICE", 287, "FROSTED_ICE", 0, true, false), 
+    FURNACE("FURNACE", 288, "FURNACE", 0, true, false), 
+    FURNACE_MINECART("FURNACE_MINECART", 289, "POWERED_MINECART", 0, false, false), 
+    GHAST_SPAWN_EGG("GHAST_SPAWN_EGG", 290, "MONSTER_EGG", 0, false, false), 
+    GHAST_TEAR("GHAST_TEAR", 291, "GHAST_TEAR", 0, false, false), 
+    GLASS("GLASS", 292, "GLASS", 0, true, false), 
+    GLASS_BOTTLE("GLASS_BOTTLE", 293, "GLASS_BOTTLE", 0, true, false), 
+    GLASS_PANE("GLASS_PANE", 294, "THIN_GLASS", 0, true, false), 
+    GLISTERING_MELON_SLICE("GLISTERING_MELON_SLICE", 295, "SPECKLED_MELON", 0, false, false), 
+    GLOWSTONE("GLOWSTONE", 296, "GLOWSTONE", 0, true, false), 
+    GLOWSTONE_DUST("GLOWSTONE_DUST", 297, "GLOWSTONE_DUST", 0, false, false), 
+    GOLDEN_APPLE("GOLDEN_APPLE", 298, "GOLDEN_APPLE", 0, false, false), 
+    GOLDEN_AXE("GOLDEN_AXE", 299, "GOLD_AXE", 0, false, true), 
+    GOLDEN_BOOTS("GOLDEN_BOOTS", 300, "GOLD_BOOTS", 0, false, true), 
+    GOLDEN_CARROT("GOLDEN_CARROT", 301, "GOLDEN_CARROT", 0, false, false), 
+    GOLDEN_CHESTPLATE("GOLDEN_CHESTPLATE", 302, "GOLD_CHESTPLATE", 0, false, true), 
+    GOLDEN_HELMET("GOLDEN_HELMET", 303, "GOLD_HELMET", 0, false, true), 
+    GOLDEN_HOE("GOLDEN_HOE", 304, "GOLD_HOE", 0, false, true), 
+    GOLDEN_HORSE_ARMOR("GOLDEN_HORSE_ARMOR", 305, "GOLD_BARDING", 0, false, true), 
+    GOLDEN_LEGGINGS("GOLDEN_LEGGINGS", 306, "GOLD_LEGGINGS", 0, false, true), 
+    GOLDEN_PICKAXE("GOLDEN_PICKAXE", 307, "GOLD_PICKAXE", 0, false, true), 
+    GOLDEN_SHOVEL("GOLDEN_SHOVEL", 308, "GOLD_SPADE", 0, false, true), 
+    GOLDEN_SWORD("GOLDEN_SWORD", 309, "GOLD_SWORD", 0, false, true), 
+    GOLD_BLOCK("GOLD_BLOCK", 310, "GOLD_BLOCK", 0, true, false), 
+    GOLD_INGOT("GOLD_INGOT", 311, "GOLD_INGOT", 0, false, false), 
+    GOLD_NUGGET("GOLD_NUGGET", 312, "GOLD_NUGGET", 0, false, false), 
+    GOLD_ORE("GOLD_ORE", 313, "GOLD_ORE", 0, true, false), 
+    GRANITE("GRANITE", 314, "STONE", 1, true, false), 
+    GRASS("GRASS", 315, "LONG_GRASS", 1, true, false), 
+    GRASS_BLOCK("GRASS_BLOCK", 316, "GRASS", 0, true, false), 
+    GRASS_PATH("GRASS_PATH", 317, "GRASS_PATH", 0, true, false), 
+    GRAVEL("GRAVEL", 318, "GRAVEL", 0, true, false), 
+    GRAY_BANNER("GRAY_BANNER", 319, "BANNER", 8, false, false), 
+    GRAY_BED("GRAY_BED", 320, "BED", 7, true, false), 
+    GRAY_CARPET("GRAY_CARPET", 321, "CARPET", 7, false, false), 
+    GRAY_CONCRETE("GRAY_CONCRETE", 322, "CONCRETE", 7, true, false), 
+    GRAY_CONCRETE_POWDER("GRAY_CONCRETE_POWDER", 323, "CONCRETE_POWDER", 7, true, false), 
+    GRAY_DYE("GRAY_DYE", 324, "INK_SACK", 8, false, false), 
+    GRAY_GLAZED_TERRACOTTA("GRAY_GLAZED_TERRACOTTA", 325, "GRAY_GLAZED_TERRACOTTA", 0, true, false), 
+    GRAY_SHULKER_BOX("GRAY_SHULKER_BOX", 326, "GRAY_SHULKER_BOX", 0, true, false), 
+    GRAY_STAINED_GLASS("GRAY_STAINED_GLASS", 327, "STAINED_GLASS", 7, true, false), 
+    GRAY_STAINED_GLASS_PANE("GRAY_STAINED_GLASS_PANE", 328, "STAINED_GLASS_PANE", 7, true, false), 
+    GRAY_TERRACOTTA("GRAY_TERRACOTTA", 329, "STAINED_CLAY", 7, true, false), 
+    GRAY_WALL_BANNER("GRAY_WALL_BANNER", 330, "WALL_BANNER", 0, true, false), 
+    GRAY_WOOL("GRAY_WOOL", 331, "WOOL", 7, true, false), 
+    GREEN_BANNER("GREEN_BANNER", 332, "BANNER", 2, false, false), 
+    GREEN_BED("GREEN_BED", 333, "BED", 13, true, false), 
+    GREEN_CARPET("GREEN_CARPET", 334, "CARPET", 13, false, false), 
+    GREEN_CONCRETE("GREEN_CONCRETE", 335, "CONCRETE", 13, true, false), 
+    GREEN_CONCRETE_POWDER("GREEN_CONCRETE_POWDER", 336, "CONCRETE_POWDER", 13, true, false), 
+    GREEN_GLAZED_TERRACOTTA("GREEN_GLAZED_TERRACOTTA", 337, "GREEN_GLAZED_TERRACOTTA", 0, true, false), 
+    GREEN_SHULKER_BOX("GREEN_SHULKER_BOX", 338, "GREEN_SHULKER_BOX", 0, true, false), 
+    GREEN_STAINED_GLASS("GREEN_STAINED_GLASS", 339, "STAINED_GLASS", 13, true, false), 
+    GREEN_STAINED_GLASS_PANE("GREEN_STAINED_GLASS_PANE", 340, "STAINED_GLASS_PANE", 13, true, false), 
+    GREEN_TERRACOTTA("GREEN_TERRACOTTA", 341, "STAINED_CLAY", 13, true, false), 
+    GREEN_WALL_BANNER("GREEN_WALL_BANNER", 342, "WALL_BANNER", 0, false, false), 
+    GREEN_WOOL("GREEN_WOOL", 343, "WOOL", 13, true, false), 
+    GUARDIAN_SPAWN_EGG("GUARDIAN_SPAWN_EGG", 344, "MONSTER_EGG", 0, false, false), 
+    GUNPOWDER("GUNPOWDER", 345, "SULPHUR", 0, false, false), 
+    HAY_BLOCK("HAY_BLOCK", 346, "HAY_BLOCK", 0, true, false), 
+    HEART_OF_THE_SEA("HEART_OF_THE_SEA", 347, (String)null, 0, false, false), 
+    HEAVY_WEIGHTED_PRESSURE_PLATE("HEAVY_WEIGHTED_PRESSURE_PLATE", 348, "IRON_PLATE", 0, false, false), 
+    HOPPER("HOPPER", 349, "HOPPER", 0, true, false), 
+    HOPPER_MINECART("HOPPER_MINECART", 350, "HOPPER_MINECART", 0, true, false), 
+    HORN_CORAL("HORN_CORAL", 351, (String)null, 0, true, false), 
+    HORN_CORAL_BLOCK("HORN_CORAL_BLOCK", 352, (String)null, 0, true, false), 
+    HORN_CORAL_FAN("HORN_CORAL_FAN", 353, (String)null, 0, true, false), 
+    HORSE_SPAWN_EGG("HORSE_SPAWN_EGG", 354, "MONSTER_EGG", 0, false, false), 
+    HUSK_SPAWN_EGG("HUSK_SPAWN_EGG", 355, "MONSTER_EGG", 0, false, false), 
+    ICE("ICE", 356, "ICE", 0, true, false), 
+    INFESTED_CHISELED_STONE_BRICKS("INFESTED_CHISELED_STONE_BRICKS", 357, "MONSTER_EGGS", 5, true, false), 
+    INFESTED_COBBLESTONE("INFESTED_COBBLESTONE", 358, "MONSTER_EGGS", 1, true, false), 
+    INFESTED_CRACKED_STONE_BRICKS("INFESTED_CRACKED_STONE_BRICKS", 359, "MONSTER_EGGS", 4, true, false), 
+    INFESTED_MOSSY_STONE_BRICKS("INFESTED_MOSSY_STONE_BRICKS", 360, "MONSTER_EGGS", 3, true, false), 
+    INFESTED_STONE("INFESTED_STONE", 361, "MONSTER_EGGS", 0, true, false), 
+    INFESTED_STONE_BRICKS("INFESTED_STONE_BRICKS", 362, "MONSTER_EGGS", 2, true, false), 
+    INK_SAC("INK_SAC", 363, "INK_SACK", 0, false, false), 
+    IRON_AXE("IRON_AXE", 364, "IRON_AXE", 0, false, true), 
+    IRON_BARS("IRON_BARS", 365, "IRON_FENCE", 0, true, false), 
+    IRON_BLOCK("IRON_BLOCK", 366, "IRON_BLOCK", 0, true, false), 
+    IRON_BOOTS("IRON_BOOTS", 367, "IRON_BOOTS", 0, false, true), 
+    IRON_CHESTPLATE("IRON_CHESTPLATE", 368, "IRON_CHESTPLATE", 0, false, true), 
+    IRON_DOOR("IRON_DOOR", 369, "IRON_DOOR", 0, true, false), 
+    IRON_HELMET("IRON_HELMET", 370, "IRON_HELMET", 0, false, true), 
+    IRON_HOE("IRON_HOE", 371, "IRON_HOE", 0, false, true), 
+    IRON_HORSE_ARMOR("IRON_HORSE_ARMOR", 372, "IRON_BARDING", 0, false, true), 
+    IRON_INGOT("IRON_INGOT", 373, "IRON_INGOT", 0, false, false), 
+    IRON_LEGGINGS("IRON_LEGGINGS", 374, "IRON_LEGGINGS", 0, false, true), 
+    IRON_NUGGET("IRON_NUGGET", 375, "IRON_NUGGET", 0, false, false), 
+    IRON_ORE("IRON_ORE", 376, "IRON_ORE", 0, true, false), 
+    IRON_PICKAXE("IRON_PICKAXE", 377, "IRON_PICKAXE", 0, false, true), 
+    IRON_SHOVEL("IRON_SHOVEL", 378, "IRON_SPADE", 0, false, true), 
+    IRON_SWORD("IRON_SWORD", 379, "IRON_SWORD", 0, false, true), 
+    IRON_TRAPDOOR("IRON_TRAPDOOR", 380, "IRON_TRAPDOOR", 0, false, false), 
+    ITEM_FRAME("ITEM_FRAME", 381, "ITEM_FRAME", 0, false, false), 
+    JACK_O_LANTERN("JACK_O_LANTERN", 382, "JACK_O_LANTERN", 0, true, false), 
+    JUKEBOX("JUKEBOX", 383, "JUKEBOX", 0, true, false), 
+    JUNGLE_BOAT("JUNGLE_BOAT", 384, "BOAT_JUNGLE", 0, false, false), 
+    JUNGLE_BUTTON("JUNGLE_BUTTON", 385, "WOOD_BUTTON", 0, false, false), 
+    JUNGLE_DOOR("JUNGLE_DOOR", 386, "JUNGLE_DOOR", 0, true, false), 
+    JUNGLE_FENCE("JUNGLE_FENCE", 387, "JUNGLE_FENCE", 0, true, false), 
+    JUNGLE_FENCE_GATE("JUNGLE_FENCE_GATE", 388, "JUNGLE_FENCE_GATE", 0, true, false), 
+    JUNGLE_LEAVES("JUNGLE_LEAVES", 389, "LEAVES", 3, true, false), 
+    JUNGLE_LOG("JUNGLE_LOG", 390, "LOG", 3, true, false), 
+    JUNGLE_PLANKS("JUNGLE_PLANKS", 391, "WOOD", 3, true, false), 
+    JUNGLE_PRESSURE_PLATE("JUNGLE_PRESSURE_PLATE", 392, "WOOD_PLATE", 0, true, false), 
+    JUNGLE_SAPLING("JUNGLE_SAPLING", 393, "SAPLING", 3, false, false), 
+    JUNGLE_SLAB("JUNGLE_SLAB", 394, "WOOD_STEP", 3, true, false), 
+    JUNGLE_STAIRS("JUNGLE_STAIRS", 395, "JUNGLE_WOOD_STAIRS", 0, true, false), 
+    JUNGLE_TRAPDOOR("JUNGLE_TRAPDOOR", 396, "TRAP_DOOR", 0, true, false), 
+    JUNGLE_WOOD("JUNGLE_WOOD", 397, "LOG", 3, true, false), 
+    KELP("KELP", 398, (String)null, 0, false, false), 
+    KELP_PLANT("KELP_PLANT", 399, (String)null, 0, false, false), 
+    KNOWLEDGE_BOOK("KNOWLEDGE_BOOK", 400, "KNOWLEDGE_BOOK", 0, false, false), 
+    LADDER("LADDER", 401, "LADDER", 0, true, false), 
+    LAPIS_BLOCK("LAPIS_BLOCK", 402, "LAPIS_BLOCK", 0, true, false), 
+    LAPIS_LAZULI("LAPIS_LAZULI", 403, "INK_SACK", 4, false, false), 
+    LAPIS_ORE("LAPIS_ORE", 404, "LAPIS_ORE", 0, true, false), 
+    LARGE_FERN("LARGE_FERN", 405, "DOUBLE_PLANT", 3, false, false), 
+    LAVA("LAVA", 406, "LAVA", 0, false, false), 
+    LAVA_BUCKET("LAVA_BUCKET", 407, "LAVA_BUCKET", 0, false, false), 
+    LEAD("LEAD", 408, "LEASH", 0, false, false), 
+    LEATHER("LEATHER", 409, "LEATHER", 0, false, false), 
+    LEATHER_BOOTS("LEATHER_BOOTS", 410, "LEATHER_BOOTS", 0, false, true), 
+    LEATHER_CHESTPLATE("LEATHER_CHESTPLATE", 411, "LEATHER_CHESTPLATE", 0, false, true), 
+    LEATHER_HELMET("LEATHER_HELMET", 412, "LEATHER_HELMET", 0, false, true), 
+    LEATHER_LEGGINGS("LEATHER_LEGGINGS", 413, "LEATHER_LEGGINGS", 0, false, true), 
+    LEVER("LEVER", 414, "LEVER", 0, false, false), 
+    LIGHT_BLUE_BANNER("LIGHT_BLUE_BANNER", 415, "BANNER", 12, false, false), 
+    LIGHT_BLUE_BED("LIGHT_BLUE_BED", 416, "BED", 3, true, false), 
+    LIGHT_BLUE_CARPET("LIGHT_BLUE_CARPET", 417, "CARPET", 3, false, false), 
+    LIGHT_BLUE_CONCRETE("LIGHT_BLUE_CONCRETE", 418, "CONCRETE", 3, true, false), 
+    LIGHT_BLUE_CONCRETE_POWDER("LIGHT_BLUE_CONCRETE_POWDER", 419, "CONCRETE_POWDER", 3, true, false), 
+    LIGHT_BLUE_DYE("LIGHT_BLUE_DYE", 420, "INK_SACK", 12, false, false), 
+    LIGHT_BLUE_GLAZED_TERRACOTTA("LIGHT_BLUE_GLAZED_TERRACOTTA", 421, "LIGHT_BLUE_GLAZED_TERRACOTTA", 0, true, false), 
+    LIGHT_BLUE_SHULKER_BOX("LIGHT_BLUE_SHULKER_BOX", 422, "LIGHT_BLUE_SHULKER_BOX", 0, true, false), 
+    LIGHT_BLUE_STAINED_GLASS("LIGHT_BLUE_STAINED_GLASS", 423, "STAINED_GLASS", 3, true, false), 
+    LIGHT_BLUE_STAINED_GLASS_PANE("LIGHT_BLUE_STAINED_GLASS_PANE", 424, "STAINED_GLASS_PANE", 3, true, false), 
+    LIGHT_BLUE_TERRACOTTA("LIGHT_BLUE_TERRACOTTA", 425, "STAINED_CLAY", 3, true, false), 
+    LIGHT_BLUE_WALL_BANNER("LIGHT_BLUE_WALL_BANNER", 426, "BANNER", 0, false, false), 
+    LIGHT_BLUE_WOOL("LIGHT_BLUE_WOOL", 427, "WOOL", 3, true, false), 
+    LIGHT_GRAY_BANNER("LIGHT_GRAY_BANNER", 428, "BANNER", 7, false, false), 
+    LIGHT_GRAY_BED("LIGHT_GRAY_BED", 429, "BED", 8, true, false), 
+    LIGHT_GRAY_CARPET("LIGHT_GRAY_CARPET", 430, "CARPET", 8, false, false), 
+    LIGHT_GRAY_CONCRETE("LIGHT_GRAY_CONCRETE", 431, "CONCRETE", 8, true, false), 
+    LIGHT_GRAY_CONCRETE_POWDER("LIGHT_GRAY_CONCRETE_POWDER", 432, "CONCRETE_POWDER", 8, true, false), 
+    LIGHT_GRAY_DYE("LIGHT_GRAY_DYE", 433, "INK_SACK", 7, false, false), 
+    LIGHT_GRAY_GLAZED_TERRACOTTA("LIGHT_GRAY_GLAZED_TERRACOTTA", 434, "SILVER_GLAZED_TERRACOTTA", 0, true, false), 
+    LIGHT_GRAY_SHULKER_BOX("LIGHT_GRAY_SHULKER_BOX", 435, "SILVER_SHULKER_BOX", 0, true, false), 
+    LIGHT_GRAY_STAINED_GLASS("LIGHT_GRAY_STAINED_GLASS", 436, "STAINED_GLASS", 8, true, false), 
+    LIGHT_GRAY_STAINED_GLASS_PANE("LIGHT_GRAY_STAINED_GLASS_PANE", 437, "STAINED_GLASS_PANE", 8, true, false), 
+    LIGHT_GRAY_TERRACOTTA("LIGHT_GRAY_TERRACOTTA", 438, "STAINED_CLAY", 8, true, false), 
+    LIGHT_GRAY_WALL_BANNER("LIGHT_GRAY_WALL_BANNER", 439, "WALL_BANNER", 0, false, false), 
+    LIGHT_GRAY_WOOL("LIGHT_GRAY_WOOL", 440, "WOOL", 8, true, false), 
+    LIGHT_WEIGHTED_PRESSURE_PLATE("LIGHT_WEIGHTED_PRESSURE_PLATE", 441, "GOLD_PLATE", 0, false, false), 
+    LILAC("LILAC", 442, "DOUBLE_PLANT", 1, false, false), 
+    LILY_PAD("LILY_PAD", 443, "WATER_LILY", 0, false, false), 
+    LIME_BANNER("LIME_BANNER", 444, "BANNER", 10, false, false), 
+    LIME_BED("LIME_BED", 445, "BED", 5, true, false), 
+    LIME_CARPET("LIME_CARPET", 446, "CARPET", 5, false, false), 
+    LIME_CONCRETE("LIME_CONCRETE", 447, "CONCRETE", 5, true, false), 
+    LIME_CONCRETE_POWDER("LIME_CONCRETE_POWDER", 448, "CONCRETE_POWDER", 5, true, false), 
+    LIME_DYE("LIME_DYE", 449, "INK_SACK", 10, false, false), 
+    LIME_GLAZED_TERRACOTTA("LIME_GLAZED_TERRACOTTA", 450, "LIME_GLAZED_TERRACOTTA", 0, true, false), 
+    LIME_SHULKER_BOX("LIME_SHULKER_BOX", 451, "LIME_SHULKER_BOX", 0, true, false), 
+    LIME_STAINED_GLASS("LIME_STAINED_GLASS", 452, "STAINED_GLASS", 5, true, false), 
+    LIME_STAINED_GLASS_PANE("LIME_STAINED_GLASS_PANE", 453, "STAINED_GLASS_PANE", 5, true, false), 
+    LIME_TERRACOTTA("LIME_TERRACOTTA", 454, "STAINED_CLAY", 5, true, false), 
+    LIME_WALL_BANNER("LIME_WALL_BANNER", 455, "WALL_BANNER", 0, false, false), 
+    LIME_WOOL("LIME_WOOL", 456, "WOOL", 5, true, false), 
+    LINGERING_POTION("LINGERING_POTION", 457, "LINGERING_POTION", 0, false, false), 
+    LLAMA_SPAWN_EGG("LLAMA_SPAWN_EGG", 458, "MONSTER_EGG", 0, false, false), 
+    MAGENTA_BANNER("MAGENTA_BANNER", 459, "BANNER", 13, false, false), 
+    MAGENTA_BED("MAGENTA_BED", 460, "BED", 2, true, false), 
+    MAGENTA_CARPET("MAGENTA_CARPET", 461, "CARPET", 2, false, false), 
+    MAGENTA_CONCRETE("MAGENTA_CONCRETE", 462, "CONCRETE", 2, true, false), 
+    MAGENTA_CONCRETE_POWDER("MAGENTA_CONCRETE_POWDER", 463, "CONCRETE_POWDER", 2, true, false), 
+    MAGENTA_DYE("MAGENTA_DYE", 464, "INK_SACK", 13, false, false), 
+    MAGENTA_GLAZED_TERRACOTTA("MAGENTA_GLAZED_TERRACOTTA", 465, "MAGENTA_GLAZED_TERRACOTTA", 0, true, false), 
+    MAGENTA_SHULKER_BOX("MAGENTA_SHULKER_BOX", 466, "MAGENTA_SHULKER_BOX", 0, true, false), 
+    MAGENTA_STAINED_GLASS("MAGENTA_STAINED_GLASS", 467, "STAINED_GLASS", 2, true, false), 
+    MAGENTA_STAINED_GLASS_PANE("MAGENTA_STAINED_GLASS_PANE", 468, "STAINED_GLASS_PANE", 2, true, false), 
+    MAGENTA_TERRACOTTA("MAGENTA_TERRACOTTA", 469, "STAINED_CLAY", 2, true, false), 
+    MAGENTA_WALL_BANNER("MAGENTA_WALL_BANNER", 470, "WALL_BANNER", 0, false, false), 
+    MAGENTA_WOOL("MAGENTA_WOOL", 471, "WOOL", 2, true, false), 
+    MAGMA_BLOCK("MAGMA_BLOCK", 472, "MAGMA", 0, true, false), 
+    MAGMA_CREAM("MAGMA_CREAM", 473, "MAGMA_CREAM", 0, false, false), 
+    MAGMA_CUBE_SPAWN_EGG("MAGMA_CUBE_SPAWN_EGG", 474, "MONSTER_EGG", 0, false, false), 
+    MAP("MAP", 475, "MAP", 0, false, false), 
+    MELON("MELON", 476, "MELON_BLOCK", 0, true, false), 
+    MELON_SEEDS("MELON_SEEDS", 477, "MELON_SEEDS", 0, false, false), 
+    MELON_SLICE("MELON_SLICE", 478, "MELON", 0, false, false), 
+    MELON_STEM("MELON_STEM", 479, "MELON_STEM", 0, false, false), 
+    MILK_BUCKET("MILK_BUCKET", 480, "MILK_BUCKET", 0, false, false), 
+    MINECART("MINECART", 481, "MINECART", 0, false, false), 
+    MOOSHROOM_SPAWN_EGG("MOOSHROOM_SPAWN_EGG", 482, "MONSTER_EGG", 0, false, false), 
+    MOSSY_COBBLESTONE("MOSSY_COBBLESTONE", 483, "MOSSY_COBBLESTONE", 0, true, false), 
+    MOSSY_COBBLESTONE_WALL("MOSSY_COBBLESTONE_WALL", 484, "COBBLE_WALL", 1, true, false), 
+    MOSSY_STONE_BRICKS("MOSSY_STONE_BRICKS", 485, "SMOOTH_BRICK", 1, true, false), 
+    MOVING_PISTON("MOVING_PISTON", 486, "PISTON_MOVING_PIECE", 0, true, false), 
+    MULE_SPAWN_EGG("MULE_SPAWN_EGG", 487, "MONSTER_EGG", 0, false, false), 
+    MUSHROOM_STEM("MUSHROOM_STEM", 488, "BROWN_MUSHROOM", 0, false, false), 
+    MUSHROOM_STEW("MUSHROOM_STEW", 489, "MUSHROOM_SOUP", 0, false, false), 
+    MUSIC_DISC_11("MUSIC_DISC_11", 490, "GOLD_RECORD", 0, false, false), 
+    MUSIC_DISC_13("MUSIC_DISC_13", 491, "GREEN_RECORD", 0, false, false), 
+    MUSIC_DISC_BLOCKS("MUSIC_DISC_BLOCKS", 492, "RECORD_3", 0, false, false), 
+    MUSIC_DISC_CAT("MUSIC_DISC_CAT", 493, "RECORD_4", 0, false, false), 
+    MUSIC_DISC_CHIRP("MUSIC_DISC_CHIRP", 494, "RECORD_5", 0, false, false), 
+    MUSIC_DISC_FAR("MUSIC_DISC_FAR", 495, "RECORD_6", 0, false, false), 
+    MUSIC_DISC_MALL("MUSIC_DISC_MALL", 496, "RECORD_7", 0, false, false), 
+    MUSIC_DISC_MELLOHI("MUSIC_DISC_MELLOHI", 497, "RECORD_8", 0, false, false), 
+    MUSIC_DISC_STAL("MUSIC_DISC_STAL", 498, "RECORD_9", 0, false, false), 
+    MUSIC_DISC_STRAD("MUSIC_DISC_STRAD", 499, "RECORD_10", 0, false, false), 
+    MUSIC_DISC_WAIT("MUSIC_DISC_WAIT", 500, "RECORD_11", 0, false, false), 
+    MUSIC_DISC_WARD("MUSIC_DISC_WARD", 501, "RECORD_12", 0, false, false), 
+    MUTTON("MUTTON", 502, "MUTTON", 0, false, false), 
+    MYCELIUM("MYCELIUM", 503, "MYCEL", 0, true, false), 
+    NAME_TAG("NAME_TAG", 504, "NAME_TAG", 0, false, false), 
+    NAUTILUS_SHELL("NAUTILUS_SHELL", 505, (String)null, 0, false, false), 
+    NETHERRACK("NETHERRACK", 506, "NETHERRACK", 0, true, false), 
+    NETHER_BRICK("NETHER_BRICK", 507, "NETHER_BRICK", 0, true, false), 
+    NETHER_BRICKS("NETHER_BRICKS", 508, "NETHER_BRICK", 0, true, false), 
+    NETHER_BRICK_FENCE("NETHER_BRICK_FENCE", 509, "NETHER_FENCE", 0, true, false), 
+    NETHER_BRICK_SLAB("NETHER_BRICK_SLAB", 510, "STEP", 6, true, false), 
+    NETHER_BRICK_STAIRS("NETHER_BRICK_STAIRS", 511, "NETHER_BRICK_STAIRS", 0, true, false), 
+    NETHER_PORTAL("NETHER_PORTAL", 512, "PORTAL", 0, false, false), 
+    NETHER_QUARTZ_ORE("NETHER_QUARTZ_ORE", 513, "QUARTZ_ORE", 0, true, false), 
+    NETHER_STAR("NETHER_STAR", 514, "NETHER_STAR", 0, false, false), 
+    NETHER_WART("NETHER_WART", 515, "NETHER_STALK", 0, false, false), 
+    NETHER_WARTS("NETHER_WARTS", 516, "NETHER_WART", "NETHER_WARTS", 0, false, false), 
+    NETHER_WART_BLOCK("NETHER_WART_BLOCK", 517, "NETHER_WART_BLOCK", 0, true, false), 
+    NOTE_BLOCK("NOTE_BLOCK", 518, "NOTE_BLOCK", 0, true, false), 
+    OAK_BOAT("OAK_BOAT", 519, "BOAT", 0, false, false), 
+    OAK_BUTTON("OAK_BUTTON", 520, "WOOD_BUTTON", 0, false, false), 
+    OAK_DOOR("OAK_DOOR", 521, "WOOD_DOOR", 0, true, false), 
+    OAK_FENCE("OAK_FENCE", 522, "FENCE", 0, true, false), 
+    OAK_FENCE_GATE("OAK_FENCE_GATE", 523, "FENCE_GATE", 0, true, false), 
+    OAK_LEAVES("OAK_LEAVES", 524, "LEAVES", 0, true, false), 
+    OAK_LOG("OAK_LOG", 525, "LOG", 0, true, false), 
+    OAK_PLANKS("OAK_PLANKS", 526, "WOOD", 0, true, false), 
+    OAK_PRESSURE_PLATE("OAK_PRESSURE_PLATE", 527, "WOOD_PLATE", 0, false, false), 
+    OAK_SAPLING("OAK_SAPLING", 528, "SAPLING", 0, false, false), 
+    OAK_SLAB("OAK_SLAB", 529, "WOOD_STEP", 0, true, false), 
+    OAK_STAIRS("OAK_STAIRS", 530, "WOOD_STAIRS", 0, true, false), 
+    OAK_TRAPDOOR("OAK_TRAPDOOR", 531, "TRAP_DOOR", 0, true, false), 
+    OAK_WOOD("OAK_WOOD", 532, "LOG", 0, true, false), 
+    OBSERVER("OBSERVER", 533, "OBSERVER", 0, true, false), 
+    OBSIDIAN("OBSIDIAN", 534, "OBSIDIAN", 0, true, false), 
+    OCELOT_SPAWN_EGG("OCELOT_SPAWN_EGG", 535, "RECORD_12", 0, false, false), 
+    ORANGE_BANNER("ORANGE_BANNER", 536, "BANNER", 14, false, false), 
+    ORANGE_BED("ORANGE_BED", 537, "BED", 1, true, false), 
+    ORANGE_CARPET("ORANGE_CARPET", 538, "CARPET", 1, false, false), 
+    ORANGE_CONCRETE("ORANGE_CONCRETE", 539, "CONCRETE", 1, true, false), 
+    ORANGE_CONCRETE_POWDER("ORANGE_CONCRETE_POWDER", 540, "CONCRETE_POWDER", 1, true, false), 
+    ORANGE_DYE("ORANGE_DYE", 541, "INK_SACK", 14, false, false), 
+    ORANGE_GLAZED_TERRACOTTA("ORANGE_GLAZED_TERRACOTTA", 542, "ORANGE_GLAZED_TERRACOTTA", 0, true, false), 
+    ORANGE_SHULKER_BOX("ORANGE_SHULKER_BOX", 543, "ORANGE_SHULKER_BOX", 0, true, false), 
+    ORANGE_STAINED_GLASS("ORANGE_STAINED_GLASS", 544, "STAINED_GLASS", 1, true, false), 
+    ORANGE_STAINED_GLASS_PANE("ORANGE_STAINED_GLASS_PANE", 545, "STAINED_GLASS_PANE", 1, true, false), 
+    ORANGE_TERRACOTTA("ORANGE_TERRACOTTA", 546, "STAINED_CLAY", 1, true, false), 
+    ORANGE_TULIP("ORANGE_TULIP", 547, "RED_ROSE", 5, false, false), 
+    ORANGE_WALL_BANNER("ORANGE_WALL_BANNER", 548, "WALL_BANNER", 0, false, false), 
+    ORANGE_WOOL("ORANGE_WOOL", 549, "WOOL", 1, true, false), 
+    OXEYE_DAISY("OXEYE_DAISY", 550, "RED_ROSE", 8, false, false), 
+    PACKED_ICE("PACKED_ICE", 551, "PACKED_ICE", 0, true, false), 
+    PAINTING("PAINTING", 552, "PAINTING", 0, false, false), 
+    PAPER("PAPER", 553, "PAPER", 0, false, false), 
+    PARROT_SPAWN_EGG("PARROT_SPAWN_EGG", 554, "MONSTER_EGG", 0, false, false), 
+    PEONY("PEONY", 555, "DOUBLE_PLANT", 5, false, false), 
+    PETRIFIED_OAK_SLAB("PETRIFIED_OAK_SLAB", 556, (String)null, 0, true, false), 
+    PHANTOM_MEMBRANE("PHANTOM_MEMBRANE", 557, (String)null, 0, false, false), 
+    PHANTOM_SPAWN_EGG("PHANTOM_SPAWN_EGG", 558, "MONSTER_EGG", 0, false, false), 
+    PIG_SPAWN_EGG("PIG_SPAWN_EGG", 559, "MONSTER_EGG", 0, false, false), 
+    PINK_BANNER("PINK_BANNER", 560, "BANNER", 9, false, false), 
+    PINK_BED("PINK_BED", 561, "BED", 6, true, false), 
+    PINK_CARPET("PINK_CARPET", 562, "CARPET", 6, false, false), 
+    PINK_CONCRETE("PINK_CONCRETE", 563, "CONCRETE", 6, true, false), 
+    PINK_CONCRETE_POWDER("PINK_CONCRETE_POWDER", 564, "CONCRETE_POWDER", 6, true, false), 
+    PINK_DYE("PINK_DYE", 565, "INK_SACK", 9, false, false), 
+    PINK_GLAZED_TERRACOTTA("PINK_GLAZED_TERRACOTTA", 566, "PINK_GLAZED_TERRACOTTA", 0, true, false), 
+    PINK_SHULKER_BOX("PINK_SHULKER_BOX", 567, "PINK_SHULKER_BOX", 0, true, false), 
+    PINK_STAINED_GLASS("PINK_STAINED_GLASS", 568, "STAINED_GLASS", 6, true, false), 
+    PINK_STAINED_GLASS_PANE("PINK_STAINED_GLASS_PANE", 569, "STAINED_GLASS_PANE", 6, true, false), 
+    PINK_TERRACOTTA("PINK_TERRACOTTA", 570, "STAINED_CLAY", 6, true, false), 
+    PINK_TULIP("PINK_TULIP", 571, "RED_ROSE", 7, false, false), 
+    PINK_WALL_BANNER("PINK_WALL_BANNER", 572, "WALL_BANNER", 0, false, false), 
+    PINK_WOOL("PINK_WOOL", 573, "WOOL", 6, true, false), 
+    PISTON("PISTON", 574, "PISTON_BASE", 0, true, false), 
+    PISTON_HEAD("PISTON_HEAD", 575, "PISTON_EXTENSION", 0, true, false), 
+    PLAYER_HEAD("PLAYER_HEAD", 576, "SKULL_ITEM", 3, true, false), 
+    PLAYER_WALL_HEAD("PLAYER_WALL_HEAD", 577, "SKULL_ITEM", 3, true, false), 
+    PODZOL("PODZOL", 578, "DIRT", 2, true, false), 
+    POISONOUS_POTATO("POISONOUS_POTATO", 579, "POISONOUS_POTATO", 0, false, false), 
+    POLAR_BEAR_SPAWN_EGG("POLAR_BEAR_SPAWN_EGG", 580, "MONSTER_EGG", 0, false, false), 
+    POLISHED_ANDESITE("POLISHED_ANDESITE", 581, "STONE", 6, true, false), 
+    POLISHED_DIORITE("POLISHED_DIORITE", 582, "STONE", 4, true, false), 
+    POLISHED_GRANITE("POLISHED_GRANITE", 583, "STONE", 2, true, false), 
+    POPPED_CHORUS_FRUIT("POPPED_CHORUS_FRUIT", 584, "CHORUS_FRUIT_POPPED", 0, false, false), 
+    POPPY("POPPY", 585, "RED_ROSE", 0, false, false), 
+    PORKCHOP("PORKCHOP", 586, "PORK", 0, false, false), 
+    POTATO("POTATO", 587, "POTATO_ITEM", 0, false, false), 
+    POTATOES("POTATOES", 588, "POTATO", 0, false, false), 
+    POTION("POTION", 589, "POTION", 0, false, false), 
+    POTTED_ACACIA_SAPLING("POTTED_ACACIA_SAPLING", 590, "FLOWER_POT", 0, true, false), 
+    POTTED_ALLIUM("POTTED_ALLIUM", 591, "FLOWER_POT", 0, true, false), 
+    POTTED_AZURE_BLUET("POTTED_AZURE_BLUET", 592, "FLOWER_POT", 0, true, false), 
+    POTTED_BIRCH_SAPLING("POTTED_BIRCH_SAPLING", 593, "FLOWER_POT", 0, true, false), 
+    POTTED_BLUE_ORCHID("POTTED_BLUE_ORCHID", 594, "FLOWER_POT", 0, true, false), 
+    POTTED_BROWN_MUSHROOM("POTTED_BROWN_MUSHROOM", 595, "FLOWER_POT", 0, true, false), 
+    POTTED_CACTUS("POTTED_CACTUS", 596, "FLOWER_POT", 0, true, false), 
+    POTTED_DANDELION("POTTED_DANDELION", 597, "FLOWER_POT", 0, true, false), 
+    POTTED_DARK_OAK_SAPLING("POTTED_DARK_OAK_SAPLING", 598, "FLOWER_POT", 0, true, false), 
+    POTTED_DEAD_BUSH("POTTED_DEAD_BUSH", 599, "FLOWER_POT", 0, true, false), 
+    POTTED_FERN("POTTED_FERN", 600, "FLOWER_POT", 0, true, false), 
+    POTTED_JUNGLE_SAPLING("POTTED_JUNGLE_SAPLING", 601, "FLOWER_POT", 0, true, false), 
+    POTTED_OAK_SAPLING("POTTED_OAK_SAPLING", 602, "FLOWER_POT", 0, true, false), 
+    POTTED_ORANGE_TULIP("POTTED_ORANGE_TULIP", 603, "FLOWER_POT", 0, true, false), 
+    POTTED_OXEYE_DAISY("POTTED_OXEYE_DAISY", 604, "FLOWER_POT", 0, true, false), 
+    POTTED_PINK_TULIP("POTTED_PINK_TULIP", 605, "FLOWER_POT", 0, true, false), 
+    POTTED_POPPY("POTTED_POPPY", 606, "FLOWER_POT", 0, true, false), 
+    POTTED_RED_MUSHROOM("POTTED_RED_MUSHROOM", 607, "FLOWER_POT", 0, true, false), 
+    POTTED_RED_TULIP("POTTED_RED_TULIP", 608, "FLOWER_POT", 0, true, false), 
+    POTTED_SPRUCE_SAPLING("POTTED_SPRUCE_SAPLING", 609, "FLOWER_POT", 0, true, false), 
+    POTTED_WHITE_TULIP("POTTED_WHITE_TULIP", 610, "FLOWER_POT", 0, true, false), 
+    POWERED_RAIL("POWERED_RAIL", 611, "POWERED_RAIL", 0, true, false), 
+    PRISMARINE("PRISMARINE", 612, "PRISMARINE", 0, true, false), 
+    PRISMARINE_BRICKS("PRISMARINE_BRICKS", 613, "PRISMARINE", 1, true, false), 
+    PRISMARINE_BRICK_SLAB("PRISMARINE_BRICK_SLAB", 614, (String)null, 0, true, false), 
+    PRISMARINE_BRICK_STAIRS("PRISMARINE_BRICK_STAIRS", 615, (String)null, 0, true, false), 
+    PRISMARINE_CRYSTALS("PRISMARINE_CRYSTALS", 616, "PRISMARINE_CRYSTALS", 0, false, false), 
+    PRISMARINE_SHARD("PRISMARINE_SHARD", 617, "PRISMARINE_SHARD", 0, false, false), 
+    PRISMARINE_SLAB("PRISMARINE_SLAB", 618, (String)null, 0, true, false), 
+    PRISMARINE_STAIRS("PRISMARINE_STAIRS", 619, (String)null, 0, true, false), 
+    PUFFERFISH("PUFFERFISH", 620, "RAW_FISH", 3, false, false), 
+    PUFFERFISH_BUCKET("PUFFERFISH_BUCKET", 621, (String)null, 0, false, false), 
+    PUFFERFISH_SPAWN_EGG("PUFFERFISH_SPAWN_EGG", 622, "MONSTER_EGG", 0, false, false), 
+    PUMPKIN("PUMPKIN", 623, "PUMPKIN", 0, true, false), 
+    PUMPKIN_PIE("PUMPKIN_PIE", 624, "PUMPKIN_PIE", 0, false, false), 
+    PUMPKIN_SEEDS("PUMPKIN_SEEDS", 625, "PUMPKIN_SEEDS", 0, false, false), 
+    PUMPKIN_STEM("PUMPKIN_STEM", 626, "PUMPKIN_STEM", 0, false, false), 
+    PURPLE_BANNER("PURPLE_BANNER", 627, "BANNER", 5, false, false), 
+    PURPLE_BED("PURPLE_BED", 628, "BED", 10, true, false), 
+    PURPLE_CARPET("PURPLE_CARPET", 629, "CARPET", 10, false, false), 
+    PURPLE_CONCRETE("PURPLE_CONCRETE", 630, "CONCRETE", 10, true, false), 
+    PURPLE_CONCRETE_POWDER("PURPLE_CONCRETE_POWDER", 631, "CONCRETE_POWDER", 10, true, false), 
+    PURPLE_DYE("PURPLE_DYE", 632, "INK_SACK", 5, false, false), 
+    PURPLE_GLAZED_TERRACOTTA("PURPLE_GLAZED_TERRACOTTA", 633, "PURPLE_GLAZED_TERRACOTTA", 0, true, false), 
+    PURPLE_SHULKER_BOX("PURPLE_SHULKER_BOX", 634, "PURPLE_SHULKER_BOX", 0, true, false), 
+    PURPLE_STAINED_GLASS("PURPLE_STAINED_GLASS", 635, "STAINED_GLASS", 10, true, false), 
+    PURPLE_STAINED_GLASS_PANE("PURPLE_STAINED_GLASS_PANE", 636, "STAINED_GLASS_PANE", 10, true, false), 
+    PURPLE_TERRACOTTA("PURPLE_TERRACOTTA", 637, "STAINED_CLAY", 10, true, false), 
+    PURPLE_WALL_BANNER("PURPLE_WALL_BANNER", 638, "WALL_BANNER", 0, true, false), 
+    PURPLE_WOOL("PURPLE_WOOL", 639, "WOOL", 10, true, false), 
+    PURPUR_BLOCK("PURPUR_BLOCK", 640, "PURPUR_BLOCK", 0, true, false), 
+    PURPUR_PILLAR("PURPUR_PILLAR", 641, "PURPUR_PILLAR", 0, true, false), 
+    PURPUR_SLAB("PURPUR_SLAB", 642, "PURPUR_SLAB", 0, true, false), 
+    PURPUR_STAIRS("PURPUR_STAIRS", 643, "PURPUR_STAIRS", 0, true, false), 
+    QUARTZ("QUARTZ", 644, "QUARTZ", 0, true, false), 
+    QUARTZ_BLOCK("QUARTZ_BLOCK", 645, "QUARTZ_BLOCK", 0, true, false), 
+    QUARTZ_PILLAR("QUARTZ_PILLAR", 646, "QUARTZ_BLOCK", 2, true, false), 
+    QUARTZ_SLAB("QUARTZ_SLAB", 647, "STEP", 7, true, false), 
+    QUARTZ_STAIRS("QUARTZ_STAIRS", 648, "QUARTZ_STAIRS", 0, true, false), 
+    RABBIT("RABBIT", 649, "RABBIT", 0, false, false), 
+    RABBIT_FOOT("RABBIT_FOOT", 650, "RABBIT_FOOT", 0, false, false), 
+    RABBIT_HIDE("RABBIT_HIDE", 651, "RABBIT_HIDE", 0, false, false), 
+    RABBIT_SPAWN_EGG("RABBIT_SPAWN_EGG", 652, "MONSTER_EGG", 0, false, false), 
+    RABBIT_STEW("RABBIT_STEW", 653, "RABBIT_STEW", 0, false, false), 
+    RAIL("RAIL", 654, "RAILS", 0, false, false), 
+    REDSTONE("REDSTONE", 655, "REDSTONE", 0, true, false), 
+    REDSTONE_BLOCK("REDSTONE_BLOCK", 656, "REDSTONE_BLOCK", 0, true, false), 
+    REDSTONE_LAMP("REDSTONE_LAMP", 657, "REDSTONE_LAMP_OFF", 0, true, false), 
+    REDSTONE_ORE("REDSTONE_ORE", 658, "REDSTONE_ORE", 0, true, false), 
+    REDSTONE_TORCH("REDSTONE_TORCH", 659, "REDSTONE_TORCH_ON", 0, false, false), 
+    REDSTONE_WALL_TORCH("REDSTONE_WALL_TORCH", 660, "REDSTONE_TORCH_ON", 1, false, false), 
+    REDSTONE_WIRE("REDSTONE_WIRE", 661, "REDSTONE_WIRE", 0, false, false), 
+    RED_BANNER("RED_BANNER", 662, "BANNER", 1, false, false), 
+    RED_BED("RED_BED", 663, "BED", 14, true, false), 
+    RED_CARPET("RED_CARPET", 664, "CARPET", 14, false, false), 
+    RED_CONCRETE("RED_CONCRETE", 665, "CONCRETE", 14, true, false), 
+    RED_CONCRETE_POWDER("RED_CONCRETE_POWDER", 666, "CONCRETE_POWDER", 14, true, false), 
+    RED_GLAZED_TERRACOTTA("RED_GLAZED_TERRACOTTA", 667, "RED_GLAZED_TERRACOTTA", 0, true, false), 
+    RED_MUSHROOM("RED_MUSHROOM", 668, "RED_MUSHROOM", 0, false, false), 
+    RED_MUSHROOM_BLOCK("RED_MUSHROOM_BLOCK", 669, "RED_MUSHROOM", 0, true, false), 
+    RED_NETHER_BRICKS("RED_NETHER_BRICKS", 670, "RED_NETHER_BRICK", 0, true, false), 
+    RED_SAND("RED_SAND", 671, "SAND", 1, true, false), 
+    RED_SANDSTONE("RED_SANDSTONE", 672, "RED_SANDSTONE", 0, true, false), 
+    RED_SANDSTONE_SLAB("RED_SANDSTONE_SLAB", 673, "STONE_SLAB2", 0, true, false), 
+    RED_SANDSTONE_STAIRS("RED_SANDSTONE_STAIRS", 674, "RED_SANDSTONE_STAIRS", 0, true, false), 
+    RED_SHULKER_BOX("RED_SHULKER_BOX", 675, "RED_SHULKER_BOX", 0, true, false), 
+    RED_STAINED_GLASS("RED_STAINED_GLASS", 676, "STAINED_GLASS", 14, true, false), 
+    RED_STAINED_GLASS_PANE("RED_STAINED_GLASS_PANE", 677, "STAINED_GLASS_PANE", 14, true, false), 
+    RED_TERRACOTTA("RED_TERRACOTTA", 678, "STAINED_CLAY", 14, true, false), 
+    RED_TULIP("RED_TULIP", 679, "RED_ROSE", 4, false, false), 
+    RED_WALL_BANNER("RED_WALL_BANNER", 680, "WALL_BANNER", 0, false, false), 
+    RED_WOOL("RED_WOOL", 681, "WOOL", 14, true, false), 
+    REPEATER("REPEATER", 682, "DIODE", 0, false, false), 
+    REPEATING_COMMAND_BLOCK("REPEATING_COMMAND_BLOCK", 683, "COMMAND_REPEATING", 0, true, false), 
+    ROSE_BUSH("ROSE_BUSH", 684, "DOUBLE_PLANT", 4, false, false), 
+    ROSE_RED("ROSE_RED", 685, "INK_SACK", 1, false, false), 
+    ROTTEN_FLESH("ROTTEN_FLESH", 686, "ROTTEN_FLESH", 0, false, false), 
+    SADDLE("SADDLE", 687, "SADDLE", 0, false, false), 
+    SALMON("SALMON", 688, "RAW_FISH", 1, false, false), 
+    SALMON_BUCKET("SALMON_BUCKET", 689, "BUCKET", 0, false, false), 
+    SALMON_SPAWN_EGG("SALMON_SPAWN_EGG", 690, "MONSTER_EGG", 0, false, false), 
+    SAND("SAND", 691, "SAND", 0, true, false), 
+    SANDSTONE("SANDSTONE", 692, "SANDSTONE", 0, true, false), 
+    SANDSTONE_SLAB("SANDSTONE_SLAB", 693, "STEP", 1, true, false), 
+    SANDSTONE_STAIRS("SANDSTONE_STAIRS", 694, "SANDSTONE_STAIRS", 0, true, false), 
+    SCUTE("SCUTE", 695, (String)null, 0, false, false), 
+    SEAGRASS("SEAGRASS", 696, (String)null, 0, false, false), 
+    SEA_LANTERN("SEA_LANTERN", 697, "SEA_LANTERN", 0, true, false), 
+    SEA_PICKLE("SEA_PICKLE", 698, (String)null, 0, false, false), 
+    SHEARS("SHEARS", 699, "SHEARS", 0, false, true), 
+    SHEEP_SPAWN_EGG("SHEEP_SPAWN_EGG", 700, "MONSTER_EGG", 0, false, false), 
+    SHIELD("SHIELD", 701, "SHIELD", 0, false, true), 
+    SHRUB("SHRUB", 702, "GRASS", "LONG_GRASS", 1, false, false), 
+    SHULKER_BOX("SHULKER_BOX", 703, "PURPLE_SHULKER_BOX", 0, true, false), 
+    SHULKER_SHELL("SHULKER_SHELL", 704, "SHULKER_SHELL", 0, false, false), 
+    SHULKER_SPAWN_EGG("SHULKER_SPAWN_EGG", 705, "MONSTER_EGG", 0, false, false), 
+    SIGN("SIGN", 706, "SIGN", 0, false, false), 
+    SILVERFISH_SPAWN_EGG("SILVERFISH_SPAWN_EGG", 707, "MONSTER_EGG", 0, false, false), 
+    SKELETON_HORSE_SPAWN_EGG("SKELETON_HORSE_SPAWN_EGG", 708, "MONSTER_EGG", 0, false, false), 
+    SKELETON_SKULL("SKELETON_SKULL", 709, "SKULL_ITEM", 0, true, false), 
+    SKELETON_SPAWN_EGG("SKELETON_SPAWN_EGG", 710, "MONSTER_EGG", 0, false, false), 
+    SKELETON_WALL_SKULL("SKELETON_WALL_SKULL", 711, "SKULL_ITEM", 0, true, false), 
+    SLIME_BALL("SLIME_BALL", 712, "SLIME_BALL", 0, false, false), 
+    SLIME_BLOCK("SLIME_BLOCK", 713, "SLIME_BLOCK", 0, true, false), 
+    SLIME_SPAWN_EGG("SLIME_SPAWN_EGG", 714, "MONSTER_EGG", 0, false, false), 
+    SMOOTH_QUARTZ("SMOOTH_QUARTZ", 715, (String)null, 0, true, false), 
+    SMOOTH_RED_SANDSTONE("SMOOTH_RED_SANDSTONE", 716, "RED_SANDSTONE", 2, true, false), 
+    SMOOTH_SANDSTONE("SMOOTH_SANDSTONE", 717, "SANDSTONE", 2, true, false), 
+    SMOOTH_STONE("SMOOTH_STONE", 718, "STEP", 0, true, false), 
+    SNOW("SNOW", 719, "SNOW", 0, false, false), 
+    SNOWBALL("SNOWBALL", 720, "SNOW_BALL", 0, false, false), 
+    SNOW_BLOCK("SNOW_BLOCK", 721, "SNOW_BLOCK", 0, true, false), 
+    SOUL_SAND("SOUL_SAND", 722, "SOUL_SAND", 0, true, false), 
+    SPAWNER("SPAWNER", 723, "MOB_SPAWNER", 0, true, false), 
+    SPECTRAL_ARROW("SPECTRAL_ARROW", 724, "SPECTRAL_ARROW", 0, false, false), 
+    SPIDER_EYE("SPIDER_EYE", 725, "SPIDER_EYE", 0, false, false), 
+    SPIDER_SPAWN_EGG("SPIDER_SPAWN_EGG", 726, "MONSTER_EGG", 0, false, false), 
+    SPLASH_POTION("SPLASH_POTION", 727, "SPLASH_POTION", 0, false, false), 
+    SPONGE("SPONGE", 728, "SPONGE", 0, true, false), 
+    SPRUCE_BOAT("SPRUCE_BOAT", 729, "BOAT_SPRUCE", 0, false, false), 
+    SPRUCE_BUTTON("SPRUCE_BUTTON", 730, "WOOD_BUTTON", 0, false, false), 
+    SPRUCE_DOOR("SPRUCE_DOOR", 731, "SPRUCE_DOOR", 0, true, false), 
+    SPRUCE_FENCE("SPRUCE_FENCE", 732, "SPRUCE_FENCE", 0, true, false), 
+    SPRUCE_FENCE_GATE("SPRUCE_FENCE_GATE", 733, "SPRUCE_FENCE_GATE", 0, true, false), 
+    SPRUCE_LEAVES("SPRUCE_LEAVES", 734, "LEAVES", 1, true, false), 
+    SPRUCE_LOG("SPRUCE_LOG", 735, "LOG", 1, true, false), 
+    SPRUCE_PLANKS("SPRUCE_PLANKS", 736, "WOOD", 1, true, false), 
+    SPRUCE_PRESSURE_PLATE("SPRUCE_PRESSURE_PLATE", 737, "WOOD_PLATE", 0, false, false), 
+    SPRUCE_SAPLING("SPRUCE_SAPLING", 738, "SAPLING", 1, false, false), 
+    SPRUCE_SLAB("SPRUCE_SLAB", 739, "WOOD_STEP", 1, true, false), 
+    SPRUCE_STAIRS("SPRUCE_STAIRS", 740, "SPRUCE_WOOD_STAIRS", 0, true, false), 
+    SPRUCE_TRAPDOOR("SPRUCE_TRAPDOOR", 741, "TRAP_DOOR", 0, true, false), 
+    SPRUCE_WOOD("SPRUCE_WOOD", 742, "LOG", 1, true, false), 
+    SQUID_SPAWN_EGG("SQUID_SPAWN_EGG", 743, "MONSTER_EGG", 0, false, false), 
+    STATIONARY_LAVA("STATIONARY_LAVA", 744, "LAVA", "STATIONARY_LAVA", 0, false, false), 
+    STATIONARY_WATER("STATIONARY_WATER", 745, "WATER", "STATIONARY_WATER", 0, false, false), 
+    STICK("STICK", 746, "STICK", 0, false, false), 
+    STICKY_PISTON("STICKY_PISTON", 747, "PISTON_STICKY_BASE", 0, true, false), 
+    STONE("STONE", 748, "STONE", 0, true, false), 
+    STONE_AXE("STONE_AXE", 749, "STONE_AXE", 0, false, true), 
+    STONE_BRICKS("STONE_BRICKS", 750, "SMOOTH_BRICK", 0, true, false), 
+    STONE_BRICK_SLAB("STONE_BRICK_SLAB", 751, "STEP", 5, true, false), 
+    STONE_BRICK_STAIRS("STONE_BRICK_STAIRS", 752, "SMOOTH_STAIRS", 0, true, false), 
+    STONE_BUTTON("STONE_BUTTON", 753, "STONE_BUTTON", 0, false, false), 
+    STONE_HOE("STONE_HOE", 754, "STONE_HOE", 0, false, true), 
+    STONE_PICKAXE("STONE_PICKAXE", 755, "STONE_PICKAXE", 0, false, true), 
+    STONE_PRESSURE_PLATE("STONE_PRESSURE_PLATE", 756, "STONE_PLATE", 0, true, false), 
+    STONE_SHOVEL("STONE_SHOVEL", 757, "STONE_SPADE", 0, false, true), 
+    STONE_SLAB("STONE_SLAB", 758, "STEP", 0, true, false), 
+    STONE_SWORD("STONE_SWORD", 759, "STONE_SWORD", 0, false, true), 
+    STRAY_SPAWN_EGG("STRAY_SPAWN_EGG", 760, "MONSTER_EGG", 0, false, false), 
+    STRING("STRING", 761, "STRING", 0, false, false), 
+    STRIPPED_ACACIA_LOG("STRIPPED_ACACIA_LOG", 762, (String)null, 0, true, false), 
+    STRIPPED_ACACIA_WOOD("STRIPPED_ACACIA_WOOD", 763, (String)null, 0, true, false), 
+    STRIPPED_BIRCH_LOG("STRIPPED_BIRCH_LOG", 764, (String)null, 0, true, false), 
+    STRIPPED_BIRCH_WOOD("STRIPPED_BIRCH_WOOD", 765, (String)null, 0, true, false), 
+    STRIPPED_DARK_OAK_LOG("STRIPPED_DARK_OAK_LOG", 766, (String)null, 0, true, false), 
+    STRIPPED_DARK_OAK_WOOD("STRIPPED_DARK_OAK_WOOD", 767, (String)null, 0, true, false), 
+    STRIPPED_JUNGLE_LOG("STRIPPED_JUNGLE_LOG", 768, (String)null, 0, true, false), 
+    STRIPPED_JUNGLE_WOOD("STRIPPED_JUNGLE_WOOD", 769, (String)null, 0, true, false), 
+    STRIPPED_OAK_LOG("STRIPPED_OAK_LOG", 770, (String)null, 0, true, false), 
+    STRIPPED_OAK_WOOD("STRIPPED_OAK_WOOD", 771, (String)null, 0, true, false), 
+    STRIPPED_SPRUCE_LOG("STRIPPED_SPRUCE_LOG", 772, (String)null, 0, true, false), 
+    STRIPPED_SPRUCE_WOOD("STRIPPED_SPRUCE_WOOD", 773, (String)null, 0, true, false), 
+    STRUCTURE_BLOCK("STRUCTURE_BLOCK", 774, "STRUCTURE_BLOCK", 0, true, false), 
+    STRUCTURE_VOID("STRUCTURE_VOID", 775, "STRUCTURE_VOID", 0, true, false), 
+    SUGAR("SUGAR", 776, "SUGAR", 0, false, false), 
+    SUGAR_CANE("SUGAR_CANE", 777, "SUGAR_CANE", 0, false, false), 
+    SUNFLOWER("SUNFLOWER", 778, "DOUBLE_PLANT", 0, false, false), 
+    TALL_GRASS("TALL_GRASS", 779, "DOUBLE_PLANT", 2, false, false), 
+    TALL_SEAGRASS("TALL_SEAGRASS", 780, (String)null, 0, false, false), 
+    TERRACOTTA("TERRACOTTA", 781, "HARD_CLAY", 0, true, false), 
+    TIPPED_ARROW("TIPPED_ARROW", 782, "TIPPED_ARROW", 0, false, false), 
+    TNT("TNT", 783, "TNT", 0, true, false), 
+    TNT_MINECART("TNT_MINECART", 784, "EXPLOSIVE_MINECART", 0, false, false), 
+    TORCH("TORCH", 785, "TORCH", 0, false, false), 
+    TOTEM_OF_UNDYING("TOTEM_OF_UNDYING", 786, "TOTEM", 0, false, false), 
+    TRAPPED_CHEST("TRAPPED_CHEST", 787, "TRAPPED_CHEST", 0, true, false), 
+    TRIDENT("TRIDENT", 788, (String)null, 0, false, true), 
+    TRIPWIRE("TRIPWIRE", 789, "TRIPWIRE", 0, false, false), 
+    TRIPWIRE_HOOK("TRIPWIRE_HOOK", 790, "TRIPWIRE_HOOK", 0, false, false), 
+    TROPICAL_FISH("TROPICAL_FISH", 791, "RAW_FISH", 2, false, false), 
+    TROPICAL_FISH_BUCKET("TROPICAL_FISH_BUCKET", 792, "BUCKET", 0, false, false), 
+    TROPICAL_FISH_SPAWN_EGG("TROPICAL_FISH_SPAWN_EGG", 793, "MONSTER_EGG", 0, false, false), 
+    TUBE_CORAL("TUBE_CORAL", 794, (String)null, 0, true, false), 
+    TUBE_CORAL_BLOCK("TUBE_CORAL_BLOCK", 795, (String)null, 0, true, false), 
+    TUBE_CORAL_FAN("TUBE_CORAL_FAN", 796, (String)null, 0, true, false), 
+    TURTLE_EGG("TURTLE_EGG", 797, "MONSTER_EGG", 0, false, false), 
+    TURTLE_HELMET("TURTLE_HELMET", 798, (String)null, 0, false, true), 
+    TURTLE_SPAWN_EGG("TURTLE_SPAWN_EGG", 799, "MONSTER_EGG", 0, false, false), 
+    VEX_SPAWN_EGG("VEX_SPAWN_EGG", 800, "MONSTER_EGG", 0, false, false), 
+    VILLAGER_SPAWN_EGG("VILLAGER_SPAWN_EGG", 801, "MONSTER_EGG", 0, false, false), 
+    VINDICATOR_SPAWN_EGG("VINDICATOR_SPAWN_EGG", 802, "MONSTER_EGG", 0, false, false), 
+    VINE("VINE", 803, "VINE", 0, false, false), 
+    VOID_AIR("VOID_AIR", 804, "AIR", 0, false, false), 
+    WALL_SIGN("WALL_SIGN", 805, "WALL_SIGN", 0, false, false), 
+    WALL_TORCH("WALL_TORCH", 806, "TORCH", 1, false, false), 
+    WATER("WATER", 807, "WATER", 0, false, false), 
+    WATER_BUCKET("WATER_BUCKET", 808, "WATER_BUCKET", 0, false, false), 
+    WET_SPONGE("WET_SPONGE", 809, "SPONGE", 1, true, false), 
+    WHEAT("WHEAT", 810, "WHEAT", 0, false, false), 
+    WHEAT_SEEDS("WHEAT_SEEDS", 811, "SEEDS", 0, false, false), 
+    WHITE_BANNER("WHITE_BANNER", 812, "BANNER", 15, false, false), 
+    WHITE_BED("WHITE_BED", 813, "BED", 0, true, false), 
+    WHITE_CARPET("WHITE_CARPET", 814, "CARPET", 0, false, false), 
+    WHITE_CONCRETE("WHITE_CONCRETE", 815, "CONCRETE", 0, true, false), 
+    WHITE_CONCRETE_POWDER("WHITE_CONCRETE_POWDER", 816, "CONCRETE_POWDER", 0, true, false), 
+    WHITE_GLAZED_TERRACOTTA("WHITE_GLAZED_TERRACOTTA", 817, "WHITE_GLAZED_TERRACOTTA", 0, true, false), 
+    WHITE_SHULKER_BOX("WHITE_SHULKER_BOX", 818, "WHITE_SHULKER_BOX", 0, true, false), 
+    WHITE_STAINED_GLASS("WHITE_STAINED_GLASS", 819, "STAINED_GLASS", 0, true, false), 
+    WHITE_STAINED_GLASS_PANE("WHITE_STAINED_GLASS_PANE", 820, "STAINED_GLASS_PANE", 0, true, false), 
+    WHITE_TERRACOTTA("WHITE_TERRACOTTA", 821, "TERRACOTTA", 0, true, false), 
+    WHITE_TULIP("WHITE_TULIP", 822, "RED_ROSE", 6, false, false), 
+    WHITE_WALL_BANNER("WHITE_WALL_BANNER", 823, "WALL_BANNER", 0, false, false), 
+    WHITE_WOOL("WHITE_WOOL", 824, "WOOL", 0, true, false), 
+    WITCH_SPAWN_EGG("WITCH_SPAWN_EGG", 825, "MONSTER_EGG", 0, false, false), 
+    WITHER_SKELETON_SKULL("WITHER_SKELETON_SKULL", 826, "SKULL_ITEM", 1, true, false), 
+    WITHER_SKELETON_SPAWN_EGG("WITHER_SKELETON_SPAWN_EGG", 827, "MONSTER_EGG", 0, false, false), 
+    WITHER_SKELETON_WALL_SKULL("WITHER_SKELETON_WALL_SKULL", 828, "SKULL_ITEM", 1, true, false), 
+    WOLF_SPAWN_EGG("WOLF_SPAWN_EGG", 829, "MONSTER_EGG", 0, false, false), 
+    WOODEN_AXE("WOODEN_AXE", 830, "WOOD_AXE", 0, false, true), 
+    WOODEN_HOE("WOODEN_HOE", 831, "WOOD_HOE", 0, false, true), 
+    WOODEN_PICKAXE("WOODEN_PICKAXE", 832, "WOOD_PICKAXE", 0, false, true), 
+    WOODEN_SHOVEL("WOODEN_SHOVEL", 833, "WOOD_SPADE", 0, false, true), 
+    WOODEN_SWORD("WOODEN_SWORD", 834, "WOOD_SWORD", 0, false, true), 
+    WRITABLE_BOOK("WRITABLE_BOOK", 835, "BOOK_AND_QUILL", 0, false, false), 
+    WRITTEN_BOOK("WRITTEN_BOOK", 836, "WRITTEN_BOOK", 0, false, false), 
+    YELLOW_BANNER("YELLOW_BANNER", 837, "BANNER", 11, false, false), 
+    YELLOW_BED("YELLOW_BED", 838, "BED", 4, true, false), 
+    YELLOW_CARPET("YELLOW_CARPET", 839, "CARPET", 4, false, false), 
+    YELLOW_CONCRETE("YELLOW_CONCRETE", 840, "CONCRETE", 4, true, false), 
+    YELLOW_CONCRETE_POWDER("YELLOW_CONCRETE_POWDER", 841, "CONCRETE_POWDER", 4, true, false), 
+    YELLOW_GLAZED_TERRACOTTA("YELLOW_GLAZED_TERRACOTTA", 842, "YELLOW_GLAZED_TERRACOTTA", 0, true, false), 
+    YELLOW_SHULKER_BOX("YELLOW_SHULKER_BOX", 843, "YELLOW_SHULKER_BOX", 0, true, false), 
+    YELLOW_STAINED_GLASS("YELLOW_STAINED_GLASS", 844, "STAINED_GLASS", 4, true, false), 
+    YELLOW_STAINED_GLASS_PANE("YELLOW_STAINED_GLASS_PANE", 845, "STAINED_GLASS_PANE", 4, true, false), 
+    YELLOW_TERRACOTTA("YELLOW_TERRACOTTA", 846, "STAINED_CLAY", 4, true, false), 
+    YELLOW_WALL_BANNER("YELLOW_WALL_BANNER", 847, "WALL_BANNER", 0, false, false), 
+    YELLOW_WOOL("YELLOW_WOOL", 848, "WOOL", 4, true, false), 
+    ZOMBIE_HEAD("ZOMBIE_HEAD", 849, "SKULL_ITEM", 2, true, false), 
+    ZOMBIE_HORSE_SPAWN_EGG("ZOMBIE_HORSE_SPAWN_EGG", 850, "MONSTER_EGG", 0, false, false), 
+    ZOMBIE_PIGMAN_SPAWN_EGG("ZOMBIE_PIGMAN_SPAWN_EGG", 851, "MONSTER_EGG", 0, false, false), 
+    ZOMBIE_SPAWN_EGG("ZOMBIE_SPAWN_EGG", 852, "MONSTER_EGG", 0, false, false), 
+    ZOMBIE_VILLAGER_SPAWN_EGG("ZOMBIE_VILLAGER_SPAWN_EGG", 853, "MONSTER_EGG", 0, false, false), 
+    ZOMBIE_WALL_HEAD("ZOMBIE_WALL_HEAD", 854, "SKULL_ITEM", 2, true, false);
+    
+    private final String alternative;
+    private final String nameLegacy;
+    private final int dataLegacy;
+    private final boolean solid;
+    private final boolean damageable;
+    
+    private MaterialEnum(final String s, final int n, final String nameLegacy, final int dataLegacy, final boolean solid, final boolean damageable) {
+        this(s, n, null, nameLegacy, dataLegacy, solid, damageable);
+    }
+    
+    private MaterialEnum(final String name, final int ordinal, final String alternative, final String nameLegacy, final int dataLegacy, final boolean solid, final boolean damageable) {
+        this.alternative = alternative;
+        this.nameLegacy = nameLegacy;
+        this.dataLegacy = dataLegacy;
+        this.solid = solid;
+        this.damageable = damageable;
+    }
+    
+    public final String getAlternative() {
+        return this.alternative;
+    }
+    
+    public final String getNameLegacy() {
+        return this.nameLegacy;
+    }
+    
+    public final int getDataLegacy() {
+        return this.dataLegacy;
+    }
+    
+    public final boolean isSolid() {
+        return this.solid;
+    }
+    
+    public final boolean isDamageable() {
+        return this.damageable;
+    }
+    
+    public final boolean isLegacy() {
+        return this.getNameLegacy() != null;
+    }
+    
+    public final boolean isFluid() {
+        switch (this) {
+            case LAVA: {
+                return true;
+            }
+            case WATER: {
+                return true;
+            }
+            case STATIONARY_LAVA: {
+                return true;
+            }
+            case STATIONARY_WATER: {
+                return true;
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+    
+    public final boolean hasAlternative() {
+        return this.alternative != null;
+    }
+    
+    public final Material getMaterial() {
+        return this.getMaterial(true);
+    }
+    
+    public final Material getMaterial(final boolean checkAlternative) {
+        final String name = ServerUtil.isLegacy() ? this.getNameLegacy() : this.toString();
+        if (name != null) {
+            Material[] values;
+            for (int length = (values = Material.values()).length, i = 0; i < length; ++i) {
+                final Material key = values[i];
+                if (key.toString().equalsIgnoreCase(name)) {
+                    return key;
+                }
+            }
+        }
+        if (checkAlternative) {
+            final String alternative = this.getAlternative();
+            if (alternative != null) {
+                final MaterialEnum materialEnumAlternative = getMaterialEnum(alternative);
+                if (materialEnumAlternative != null) {
+                    return materialEnumAlternative.getMaterial(false);
+                }
+            }
+        }
+        return null;
+    }
+    
+    public final ItemStack toItemStack() {
+        final Material material = this.getMaterial();
+        if (material != null) {
+            return ServerUtil.isLegacy() ? new ItemStack(material, 1, (short)this.getDataLegacy()) : new ItemStack(material);
+        }
+        return null;
+    }
+    
+    public final boolean matchMaterial(final Location location) {
+        if (location != null) {
+            final Block block = location.getBlock();
+            return this.matchMaterial(block);
+        }
+        return false;
+    }
+    
+    public final boolean matchMaterial(final Block block) {
+        if (block != null) {
+            final MaterialEnum materialEnum = getMaterialEnum(block);
+            if (materialEnum != null) {
+                return materialEnum.equals(this);
+            }
+        }
+        return false;
+    }
+    
+    public final boolean matchMaterial(final ItemStack item) {
+        if (item != null) {
+            final MaterialEnum materialEnum = getMaterialEnum(item);
+            if (materialEnum != null) {
+                return materialEnum.equals(this);
+            }
+        }
+        return false;
+    }
+    
+    public final boolean equals(final MaterialEnum materialEnum) {
+        if (materialEnum != null) {
+            final String key = this.toString();
+            final String name = materialEnum.toString();
+            if (name.equalsIgnoreCase(key)) {
+                return true;
+            }
+            final String alternative = materialEnum.getAlternative();
+            if (alternative != null) {
+                return alternative.equalsIgnoreCase(key);
+            }
+        }
+        return false;
+    }
+    
+    public static final MaterialEnum getMaterialEnum(final String name) {
+        if (name != null) {
+            final String[] parts = name.split(":");
+            final String materialName = parts[0];
+            int materialData;
+            if (parts.length > 1) {
+                final String textData = parts[1];
+                if (MathUtil.isNumber(textData)) {
+                    materialData = MathUtil.parseInteger(textData);
+                }
+                else {
+                    materialData = 0;
+                }
+            }
+            else {
+                materialData = 0;
+            }
+            return getMaterialEnum(materialName, materialData);
+        }
+        return null;
+    }
+    
+    public static final MaterialEnum getMaterialEnum(String name, final int data) {
+        if (name != null) {
+            name = name.replaceFirst("LEGACY_", "");
+            if (ServerUtil.isLegacy()) {
+                MaterialEnum[] values;
+                for (int length = (values = values()).length, i = 0; i < length; ++i) {
+                    final MaterialEnum key = values[i];
+                    final String nameLegacy = key.getNameLegacy();
+                    if (nameLegacy != null && nameLegacy.equalsIgnoreCase(name) && (key.isDamageable() || key.getDataLegacy() == data)) {
+                        return key;
+                    }
+                }
+                MaterialEnum[] values2;
+                for (int length2 = (values2 = values()).length, j = 0; j < length2; ++j) {
+                    final MaterialEnum key = values2[j];
+                    if (key.toString().equalsIgnoreCase(name)) {
+                        return key;
+                    }
+                }
+            }
+            else {
+                MaterialEnum[] values3;
+                for (int length3 = (values3 = values()).length, k = 0; k < length3; ++k) {
+                    final MaterialEnum key = values3[k];
+                    if (key.toString().equalsIgnoreCase(name)) {
+                        return key;
+                    }
+                }
+                MaterialEnum[] values4;
+                for (int length4 = (values4 = values()).length, l = 0; l < length4; ++l) {
+                    final MaterialEnum key = values4[l];
+                    final String nameLegacy = key.getNameLegacy();
+                    if (nameLegacy != null && nameLegacy.equalsIgnoreCase(name) && (key.isDamageable() || key.getDataLegacy() == data)) {
+                        return key;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    
+    public static final MaterialEnum getMaterialEnum(final Material material) {
+        return getMaterialEnum(material, 0);
+    }
+    
+    public static final MaterialEnum getMaterialEnum(final Material material, final int data) {
+        if (material != null) {
+            final String name = material.toString();
+            return getMaterialEnum(name, data);
+        }
+        return null;
+    }
+    
+    public static final MaterialEnum getMaterialEnum(final Location location) {
+        if (location != null) {
+            final Block block = location.getBlock();
+            return getMaterialEnum(block);
+        }
+        return null;
+    }
+    
+    public static final MaterialEnum getMaterialEnum(final Block block) {
+        if (block != null) {
+            final Material material = block.getType();
+            final int data = ServerUtil.isLegacy() ? block.getData() : 0;
+            final MaterialEnum materialEnum = getMaterialEnum(material, data);
+            return (materialEnum != null) ? materialEnum : MaterialEnum.AIR;
+        }
+        return null;
+    }
+    
+    public static final MaterialEnum getMaterialEnum(final ItemStack item) {
+        if (item != null) {
+            final Material material = item.getType();
+            final int data = ServerUtil.isLegacy() ? item.getDurability() : 0;
+            return getMaterialEnum(material, data);
+        }
+        return null;
+    }
+    
+    public static final boolean matchMaterial(final Location location, final Material material) {
+        return matchMaterial(location, material, 0);
+    }
+    
+    public static final boolean matchMaterial(final Location location, final Material material, final int data) {
+        if (location != null && material != null) {
+            final MaterialEnum materialEnum = getMaterialEnum(material, data);
+            return matchMaterial(location, materialEnum);
+        }
+        return false;
+    }
+    
+    public static final boolean matchMaterial(final Location location, final MaterialEnum materialEnum) {
+        if (location != null && materialEnum != null) {
+            final Block block = location.getBlock();
+            return matchMaterial(block, materialEnum);
+        }
+        return false;
+    }
+    
+    public static final boolean matchMaterial(final Block block, final Material material) {
+        return matchMaterial(block, material, 0);
+    }
+    
+    public static final boolean matchMaterial(final Block block, final Material material, final int data) {
+        if (block != null && material != null) {
+            final MaterialEnum materialEnum = getMaterialEnum(material, data);
+            return matchMaterial(block, materialEnum);
+        }
+        return false;
+    }
+    
+    public static final boolean matchMaterial(final Block block, final MaterialEnum materialEnum) {
+        return block != null && materialEnum != null && materialEnum.matchMaterial(block);
+    }
+    
+    public static final boolean matchMaterial(final ItemStack item, final MaterialEnum materialEnum) {
+        return item != null && materialEnum != null && materialEnum.matchMaterial(item);
+    }
+    
+    public static final boolean isSolid(final Location location) {
+        if (location != null) {
+            final Block block = location.getBlock();
+            return isSolid(block);
+        }
+        return false;
+    }
+    
+    public static final boolean isSolid(final Block block) {
+        if (block != null) {
+            final MaterialEnum materialEnum = getMaterialEnum(block);
+            return materialEnum != null && materialEnum.isSolid();
+        }
+        return false;
+    }
+    
+    public static final boolean isFluid(final Location location) {
+        if (location != null) {
+            final Block block = location.getBlock();
+            return isFluid(block);
+        }
+        return false;
+    }
+    
+    public static final boolean isFluid(final Block block) {
+        if (block != null) {
+            final MaterialEnum materialEnum = getMaterialEnum(block);
+            return materialEnum != null && materialEnum.isFluid();
+        }
+        return false;
+    }
+}
